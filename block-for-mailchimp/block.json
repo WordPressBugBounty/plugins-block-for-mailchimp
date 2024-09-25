@@ -1,0 +1,276 @@
+{
+	"apiVersion": "1",
+	"name": "mcb/mailchimp",
+	"title": "Mailchimp-block",
+	"description": "Embed MailChimp email subscription form",
+	"category": "widgets",
+	"keywords": [
+		"newsletter",
+		"mailchimp",
+		"marketing"
+	],
+	"textdomain": "mail-collections",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": ""
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"config": {
+			"type": "object",
+			"default": {
+				"apiKey": "",
+				"audienceId": ""
+			}
+		},
+		"elements": {
+			"type": "object",
+			"default": {
+				"title": true,
+				"desc": true,
+				"fName": true,
+				"lName": true,
+				"icon": true
+			}
+		},
+		"content": {
+			"type": "object",
+			"default": {
+				"title": "Subscribe to our Newsletter",
+				"desc": "Subscribe to our newsletter & enjoy 10% off your next purchase.",
+				"button": "Subscribe"
+			}
+		},
+		"message": {
+			"type": "object",
+			"default": {
+				"success": "Subscribe Success",
+				"error": "Member Already Exists"
+			}
+		},
+		"placeholder": {
+			"type": "object",
+			"default": {
+				"fName": "First Name",
+				"lName": "Last Name",
+				"email": "Email"
+			}
+		},
+		"theme": {
+			"type": "string",
+			"default": "default"
+		},
+		"themeWidth": {
+			"type": "object",
+			"default": {
+				"desktop": "100%",
+				"tablet": "100%",
+				"mobile": "100%"
+			}
+		},
+		"themeAlign": {
+			"type": "object",
+			"default": {
+				"desktop": "left",
+				"tablet": "left",
+				"mobile": "left"
+			}
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"color": "#000",
+				"size": ""
+			}
+		},
+		"iconBG": {
+			"type": "object",
+			"default": {
+				"color": "#0575e6"
+			}
+		},
+		"titleTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 24,
+					"tablet": 18,
+					"mobile": 15
+				},
+				"fontWeight": 700,
+				"lineHeight": "135%",
+				"textTransform": "capitalize"
+			}
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"descTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 17,
+					"tablet": 15,
+					"mobile": 15
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%",
+				"textTransform": "capitalize"
+			}
+		},
+		"descColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"formBG": {
+			"type": "object",
+			"default": {
+				"color": "#d3cfcf42"
+			}
+		},
+		"formPadding": {
+			"type": "object",
+			"default": {
+				"top": "20px",
+				"right": "20px",
+				"bottom": "20px",
+				"left": "20px"
+			}
+		},
+		"formBorder": {
+			"type": "object",
+			"default": {
+				"width": "0px",
+				"style": "solid",
+				"color": "#0575e6",
+				"side": "all",
+				"radius": "5px"
+			}
+		},
+		"fieldTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 16,
+					"tablet": 15,
+					"mobile": 15
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"fieldColors": {
+			"type": "object",
+			"default": {
+				"color": "#302c2c",
+				"bg": "#f5f7fa"
+			}
+		},
+		"fieldPadding": {
+			"type": "object",
+			"default": {
+				"top": "2px",
+				"right": "13px",
+				"bottom": "2px",
+				"left": "13px"
+			}
+		},
+		"fieldBorder": {
+			"type": "object",
+			"default": {
+				"radius": "5px"
+			}
+		},
+		"fieldMargin": {
+			"type": "object",
+			"default": {
+				"top": "0px",
+				"right": "0px",
+				"bottom": "10px",
+				"left": "0px"
+			}
+		},
+		"btnTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 18,
+					"tablet": 15,
+					"mobile": 15
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"btnColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "#2355f2"
+			}
+		},
+		"btnHovColors": {
+			"type": "object",
+			"default": {
+				"color": "#fff",
+				"bg": "##2355f2"
+			}
+		},
+		"btnPadding": {
+			"type": "object",
+			"default": {
+				"top": "9px",
+				"right": "20px",
+				"bottom": "9px",
+				"left": "20px"
+			}
+		},
+		"btnBorder": {
+			"type": "object",
+			"default": {
+				"radius": "5px"
+			}
+		},
+		"messageTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 18,
+					"tablet": 15,
+					"mobile": 15
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"messageColors": {
+			"type": "object",
+			"default": {
+				"success": "#228323",
+				"error": "#f70000"
+			}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"columns": {
+				"desktop": 1,
+				"tablet": 1,
+				"mobile": 1
+			}
+		}
+	},
+	"editorScript": "file:dist/editor.js"
+}

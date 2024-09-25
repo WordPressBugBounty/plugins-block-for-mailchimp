@@ -1,0 +1,248 @@
+# Copyright (C) 2024 bPlugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mailchimp block 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailchimp-block\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-08T08:29:31+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: mail-collections\n"
+
+#. Plugin Name of the plugin
+#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+msgid "Mailchimp block"
+msgstr ""
+
+#. Description of the plugin
+#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+msgid "Connect your MailChimp with your WordPress."
+msgstr ""
+
+#. Author of the plugin
+#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+msgid "bPlugins"
+msgstr ""
+
+#. Author URI of the plugin
+#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Left"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Center"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Right"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Default"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 1"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 2"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 3"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "General"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Style"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Config"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Connection"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Select Audience"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Elements"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Icon"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Title"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Description"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "First Name"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Last Name"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Button"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Message"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Success"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Error"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Placeholder Text"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Email"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Themes"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Select Theme"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Width:"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Align:"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Form"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Background:"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Padding"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Border"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Background"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Color"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Label"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Typography"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Input"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Colors"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Margin"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Hovers Colors"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Configure"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "You must select an audience"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Title Here"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Description Here"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "MailChimp"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Sign Out"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Sign in with Mailchimp"
+msgstr ""
+
+#: block.json
+msgctxt "block title"
+msgid "Mailchimp-block"
+msgstr ""
+
+#: block.json
+msgctxt "block description"
+msgid "Embed MailChimp email subscription form"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "newsletter"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "mailchimp"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "marketing"
+msgstr ""
