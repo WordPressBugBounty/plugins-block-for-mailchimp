@@ -1,0 +1,184 @@
+[
+    {
+        "name": "mcb/form9-design",
+        "title": "Floating Top",
+        "description": "Mailchimp form-9 design",
+        "keywords": [
+            "mailchimp block",
+            "form 9 design",
+            "form design"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"3aa7e477-3\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Subscribe to our Newsletter\",\"desc\":\"Join our mailing list to keep up to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(245, 82, 32, 0.2)\"},\"theme\":\"form9\",\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":25,\"tablet\":18,\"mobile\":15},\"fontWeight\":700,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"700\"},\"titleColor\":\"rgba(245, 82, 31, 1)\",\"titleMargin\":{\"top\":\"70px\",\"right\":\"0px\",\"bottom\":\"15px\",\"left\":\"0px\"},\"descColor\":\"rgba(111, 111, 111, 1)\",\"descMargin\":{\"top\":\"10px\",\"right\":\"0px\",\"bottom\":\"44px\",\"left\":\"0px\"},\"formBG\":{\"color\":\"rgba(237, 237, 237, 1)\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"0px\"},\"fieldColors\":{\"color\":\"rgba(111, 111, 111, 1)\",\"bg\":\"#ffffff\"},\"fieldBorder\":{\"radius\":\"5px\",\"width\":\"2px\",\"color\":\"rgba(111, 111, 111, 1)\"},\"btnTypo\":{\"fontSize\":{\"desktop\":17,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"133%\",\"letterSpace\":\"1px\",\"fontVariant\":\"500\",\"textTransform\":\"capitalize\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(245, 86, 35, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(245, 87, 34, 0.89)\"},\"btnMargin\":{\"top\":\"0px\",\"right\":\"0px\",\"bottom\":\"31px\",\"left\":\"0px\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/form10-design",
+        "title": "Floating Top",
+        "description": "Mailchimp form-10 design",
+        "keywords": [
+            "mailchimp block",
+            "form 10 design",
+            "form design"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"44804138-4\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":false,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Subscribe to our Newsletter\",\"desc\":\"Join our mailing list to keep up to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.18)\"},\"theme\":\"form10\",\"icon\":{\"color\":\"#fff\"},\"descColor\":\"rgba(143, 143, 143, 1)\",\"descMargin\":{\"top\":\"40px\",\"right\":\"0px\",\"bottom\":\"58px\",\"left\":\"0px\"},\"formBG\":{\"color\":\"rgba(240, 240, 240, 1)\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"fieldBorder\":{\"radius\":\"5px\",\"width\":\"2px\",\"color\":\"rgba(198, 198, 198, 1)\"},\"btnTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"133%\",\"letterSpace\":\"1px\",\"fontVariant\":\"500\",\"textTransform\":\"uppercase\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(244, 156, 1, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(245, 155, 0, 0.82)\"},\"btnMargin\":{\"top\":\"0px\",\"right\":\"0px\",\"bottom\":\"31px\",\"left\":\"0px\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/floating-top",
+        "title": "Floating Top",
+        "description": "Mailchimp Floating Top",
+        "keywords": [
+            "mailchimp block",
+            "form 1 design",
+            "floating-top"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"5827be81-a\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"layout\":{\"placement\":\"floating-top\",\"popupTimeOut\":3},\"theme\":\"form7\",\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":20,\"tablet\":18,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"500\"},\"titleColor\":\"#ffffff\",\"formBG\":{\"color\":\"rgba(30, 39, 103, 1)\"},\"formPadding\":{\"top\":\"10px\",\"right\":\"10px\",\"bottom\":\"10px\",\"left\":\"10px\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"0px\"},\"fieldColors\":{\"color\":\"rgba(188, 188, 188, 1)\",\"bg\":\"#ffffff\"},\"fieldBorder\":{\"radius\":\"50px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"fontVariant\":\"500\",\"letterSpace\":\"1px\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(238, 45, 140, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(238, 45, 140, 1)\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"btnBorder\":{\"radius\":\"50px\"},\"closeBtn\":{\"colors\":{\"color\":\"#fff\",\"bg\":\"rgba(238, 45, 140, 1)\"},\"size\":40}} /-->"
+    },
+    {
+        "name": "mcb/form-5-design-1",
+        "title": "Form 8 Design 1",
+        "description": "Mailchimp Form 8 Design 1",
+        "keywords": [
+            "mailchimp block",
+            "form 1 design",
+            "form"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"82bdeffd-6\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":false,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"layout\":{\"placement\":\"floating-bottom\",\"popupTimeOut\":3},\"content\":{\"title\":\"Subscribe to our Newsletter\",\"desc\":\"Join our mailing list to keep to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(83, 93, 168, 1)\"},\"theme\":\"form5\",\"themeWidth\":{\"desktop\":\"85%\",\"tablet\":\"100%\",\"mobile\":\"100%\"},\"themeAlign\":{\"desktop\":\"center\",\"tablet\":\"left\",\"mobile\":\"left\"},\"icon\":{\"color\":\"#fff\"},\"descColor\":\"rgba(41, 50, 109, 1)\",\"formBG\":{\"color\":\"rgba(250, 250, 250, 0.92)\"},\"fieldColors\":{\"color\":\"rgba(42, 51, 110, 0.82)\",\"bg\":\"#ffffff\"},\"fieldBorder\":{\"radius\":\"50px\",\"color\":\"rgba(0, 0, 0, 1)\",\"width\":\"2px\"},\"fieldMargin\":{\"top\":\"15px\",\"right\":\"0px\",\"bottom\":\"10px\",\"left\":\"0px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"letterSpace\":\"1px\",\"fontVariant\":\"500\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(238, 45, 140, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(237, 45, 141, 0.85)\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"btnBorder\":{\"radius\":\"50px\"},\"closeBtn\":{\"colors\":{\"color\":\"#fff\",\"bg\":\"rgba(238, 45, 140, 1)\"},\"size\":40}} /-->"
+    },
+    {
+        "name": "mcb/form-8-design",
+        "title": "Form 8 Design",
+        "description": "Mailchimp Form 8 Design",
+        "keywords": [
+            "mailchimp block",
+            "form 8 design",
+            "form"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"9b11981d-c\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"layout\":{\"placement\":\"floating-bottom\",\"popupTimeOut\":3},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Join our mailing list to keep to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(245, 224, 39, 0.78)\"},\"theme\":\"form8\",\"themeWidth\":{\"desktop\":\"78%\",\"tablet\":\"100%\",\"mobile\":\"100%\"},\"themeAlign\":{\"desktop\":\"center\",\"tablet\":\"left\",\"mobile\":\"left\"},\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":22,\"tablet\":18,\"mobile\":15},\"fontWeight\":700,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\"},\"titleColor\":\"rgba(59, 39, 123, 1)\",\"descTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"500\"},\"descColor\":\"rgba(59, 39, 122, 0.92)\",\"formBG\":{\"color\":\"rgba(245, 226, 39, 1)\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":400,\"lineHeight\":\"135%\",\"fontVariant\":\"400\",\"isUploadFont\":false},\"fieldColors\":{\"color\":\"rgba(59, 39, 122, 0.76)\",\"bg\":\"#f5f7fa\"},\"fieldBorder\":{\"radius\":\"3px\",\"color\":\"rgba(59, 39, 123, 1)\",\"width\":\"2px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"fontVariant\":\"500\",\"letterSpace\":\"1px\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(59, 39, 123, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(59, 39, 123, 1)\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"inputLabel\":{\"typo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":14},\"fontWeight\":400,\"lineHeight\":\"135%\"},\"color\":\"rgba(59, 39, 123, 1)\",\"label\":true},\"closeBtn\":{\"colors\":{\"color\":\"#fff\",\"bg\":\"rgba(59, 39, 123, 1)\"},\"size\":40}} /-->"
+    },
+    {
+        "name": "mcb/form-design-2",
+        "title": "Form Design 2",
+        "description": "Mailchimp Form Design 2",
+        "keywords": [
+            "mailchimp block",
+            "form design 2",
+            "design 2"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"cd7399d2-3\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"layout\":{\"placement\":\"auto-popup\",\"popupTimeOut\":3},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Join our mailing list to keep to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.65)\"},\"themeWidth\":{\"desktop\":\"78%\",\"tablet\":\"100%\",\"mobile\":\"100%\"},\"themeAlign\":{\"desktop\":\"center\",\"tablet\":\"left\",\"mobile\":\"left\"},\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":25,\"tablet\":18,\"mobile\":15},\"fontWeight\":700,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\"},\"titleColor\":\"rgba(1, 25, 97, 1)\",\"descTypo\":{\"fontSize\":{\"desktop\":17,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"500\"},\"descColor\":\"rgba(99, 155, 218, 1)\",\"formBG\":{\"color\":\"#ffffff\"},\"fieldTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":400,\"lineHeight\":\"135%\",\"fontVariant\":\"400\",\"isUploadFont\":false},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"rgba(234, 234, 234, 1)\"},\"fieldMargin\":{\"top\":\"10px\",\"right\":\"0px\",\"bottom\":\"10px\",\"left\":\"0px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":18,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"fontVariant\":\"500\"},\"btnColors\":{\"color\":\"#fff\",\"bg\":\"rgba(205, 78, 58, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(205, 78, 58, 1)\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"closeBtn\":{\"colors\":{\"color\":\"#fff\",\"bg\":\"rgba(205, 78, 58, 1)\"},\"size\":40}} /-->"
+    },
+    {
+        "name": "mcb/form-design-1",
+        "title": "Form Design 1",
+        "description": "Mailchimp Form Design 1",
+        "keywords": [
+            "mailchimp block",
+            "form design 1",
+            "design 1"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"7969cf9c-5\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https: //us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"layout\":{\"placement\":\"auto-popup\",\"popupTimeOut\":3},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Join our mailing list to keep to date with our upcoming events\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.65)\"},\"themeWidth\":{\"desktop\":\"78%\",\"tablet\":\"100%\",\"mobile\":\"100%\"},\"themeAlign\":{\"desktop\":\"center\",\"tablet\":\"left\",\"mobile\":\"left\"},\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":25,\"tablet\":18,\"mobile\":15},\"fontWeight\":700,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\"},\"titleColor\":\"#ffffff\",\"descTypo\":{\"fontSize\":{\"desktop\":17,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"500\"},\"descColor\":\"rgba(241, 241, 241, 1)\",\"formBG\":{\"color\":\"#efefef\",\"type\":\"gradient\",\"gradient\":\"linear-gradient(135deg,rgb(89,206,229) 0%,rgb(4,112,131) 100%)\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":400,\"lineHeight\":\"135%\",\"fontVariant\":\"400\",\"isUploadFont\":false},\"fieldColors\":{\"color\":\"rgba(130, 130, 130, 1)\",\"bg\":\"#f5f7fa\"},\"fieldBorder\":{\"radius\":\"50px\",\"width\":\"2px\",\"color\":\"rgba(7, 4, 4, 1)\",\"style\":\"solid\"},\"fieldMargin\":{\"top\":\"10px\",\"right\":\"0px\",\"bottom\":\"10px\",\"left\":\"0px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":18,\"tablet\":15,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"fontVariant\":\"500\"},\"btnColors\":{\"color\":\"rgba(244, 243, 243, 1)\",\"bg\":\"rgba(24, 23, 23, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"btnBorder\":{\"radius\":\"50px\",\"width\":\"0px\"}} /-->"
+    },
+    {
+        "name": "mcb/floating-top-design-1",
+        "title": "Floating top design 1",
+        "description": "Mailchimp floating top design 1",
+        "keywords": [
+            "mailchimp block",
+            "form 1 design",
+            "floating-top"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"align\":\"full\",\"cId\":\"c845438d-6\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"layout\":{\"placement\":\"floating-top\",\"popupTimeOut\":3},\"content\":{\"title\":\"Join our mailing list to keep up to date with our upcoming events\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"theme\":\"form7\",\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":20,\"tablet\":18,\"mobile\":15},\"fontWeight\":500,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\",\"fontVariant\":\"500\"},\"titleColor\":\"rgba(157, 157, 157, 1)\",\"formPadding\":{\"top\":\"10px\",\"right\":\"10px\",\"bottom\":\"10px\",\"left\":\"10px\"},\"fieldTypo\":{\"fontSize\":{\"desktop\":16,\"tablet\":15,\"mobile\":15},\"fontWeight\":400,\"lineHeight\":\"135%\",\"fontVariant\":\"400\"},\"fieldColors\":{\"color\":\"rgba(196, 196, 196, 1)\",\"bg\":\"#f5f7fa\"},\"fieldBorder\":{\"radius\":\"5px\",\"color\":\"rgba(196, 196, 196, 1)\",\"width\":\"2px\"},\"btnTypo\":{\"fontSize\":{\"desktop\":18,\"tablet\":15,\"mobile\":15},\"fontWeight\":400,\"lineHeight\":\"135%\",\"letterSpace\":\"1px\"},\"btnColors\":{\"color\":\"rgba(255, 255, 255, 1)\",\"bg\":\"rgba(196, 196, 196, 1)\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"rgba(196, 196, 196, 1)\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"},\"btnBorder\":{\"radius\":\"3px\"},\"closeBtn\":{\"colors\":{\"color\":\"#fff\",\"bg\":\"rgba(196, 196, 196, 1)\"},\"size\":40}} /-->"
+    },
+    {
+        "name": "mcb/form-8",
+        "title": "Form 7",
+        "description": "Mailchimp Block Form 8",
+        "keywords": [
+            "mailchimp block",
+            "mailchimp block",
+            "form 8"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"507f795b-6\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.65)\"},\"theme\":\"form8\",\"icon\":{\"color\":\"#fff\"},\"titleTypo\":{\"fontSize\":{\"desktop\":21,\"tablet\":18,\"mobile\":15},\"fontWeight\":700,\"lineHeight\":\"135%\",\"textTransform\":\"capitalize\"},\"titleColor\":\"#ffffff\",\"descColor\":\"#ffffff\",\"formPadding\":{\"top\":\"40px\",\"right\":\"20px\",\"bottom\":\"20px\",\"left\":\"20px\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/form-7",
+        "title": "Form 7",
+        "description": "Mailchimp Block Form 7",
+        "keywords": [
+            "mailchimp block",
+            "mailchimp block",
+            "form 7"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"align\":\"full\",\"cId\":\"7307a8e5-2\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.42)\"},\"theme\":\"form7\",\"icon\":{\"color\":\"#fff\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/form-6",
+        "title": "Form 6",
+        "description": "Mailchimp Block Form 6",
+        "keywords": [
+            "mailchimp block",
+            "mailchimp block",
+            "form 6"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"a572fcc1-a\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.42)\"},\"theme\":\"form6\",\"icon\":{\"color\":\"#fff\"},\"titleColor\":\"#ffffff\",\"descColor\":\"#ffffff\",\"formPadding\":{\"top\":\"111px\",\"right\":\"20px\",\"bottom\":\"100px\",\"left\":\"20px\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/form5",
+        "title": "Form 5",
+        "description": "Mailchimp Block Form 5",
+        "keywords": [
+            "mailchimp block",
+            "mailchimp block",
+            "form 5"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"260e39ad-f\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https://us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.42)\"},\"theme\":\"form5\",\"icon\":{\"color\":\"#fff\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    },
+    {
+        "name": "mcb/form-4",
+        "title": "Form 4",
+        "description": "Mailchimp Block Form 4",
+        "keywords": [
+            "mailchimp block",
+            "mailchimp block",
+            "form 4"
+        ],
+        "blockTypes": [
+            "mcb/mailchimp"
+        ],
+        "content": "<!-- wp:mcb/mailchimp {\"cId\":\"2e492f7a-f\",\"config\":{\"apiKey\":\"\",\"audienceId\":\"f7283540bf\",\"endpoint_url\":\"https: //us10.api.mailchimp.com/3.0/lists\"},\"elements\":{\"title\":true,\"desc\":true,\"fName\":false,\"lName\":false,\"icon\":true},\"content\":{\"title\":\"Join our Newsletter\",\"desc\":\"Subscribe to our newsletter \u0026 enjoy 10% off your next purchase.\",\"button\":\"Subscribe\",\"popupBtnText\":\"Show Popup\"},\"form4LeftImage\":{\"type\":\"image\",\"image\":{\"url\":\"https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg\"},\"overlayColor\":\"rgba(0, 0, 0, 0.42)\"},\"theme\":\"form4\",\"icon\":{\"color\":\"#fff\"},\"titleColor\":\"#ffffff\",\"descColor\":\"#ffffff\",\"formPadding\":{\"top\":\"108px\",\"right\":\"20px\",\"bottom\":\"100px\",\"left\":\"20px\"},\"formBorder\":{\"width\":\"0px\",\"style\":\"solid\",\"color\":\"#0575e6\",\"side\":\"all\",\"radius\":\"3px\"},\"fieldColors\":{\"color\":\"#a3a3a3\",\"bg\":\"#f5f7fa\"},\"btnHovColors\":{\"color\":\"#fff\",\"bg\":\"#0575e67d\"},\"btnPadding\":{\"top\":\"8px\",\"right\":\"20px\",\"bottom\":\"8px\",\"left\":\"20px\"}} /-->"
+    }
+]

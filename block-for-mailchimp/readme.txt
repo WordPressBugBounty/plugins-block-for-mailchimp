@@ -1,10 +1,10 @@
-=== MailChimp Block - Embed mailchimp form in WP ===
-Contributors: bplugins, abuhayat, btechnologies
+=== Block For MailChimp - Embed mailchimp form in WP ===
+Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 5.0+
-Tested up to: 6.6.2 
-Stable tag: 1.1.0 
+Tested up to: 6.6.2
+Stable tag: 1.1.1
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -16,19 +16,82 @@ Create a fully customizable Mailchimp subscribe form, and connect your Mailchimp
 Create a fully customizable Mailchimp subscribe form and connect your Mailchimp with your WordPress.
 
 
-The Mailchimp Block Plugin seamlessly integrates Mailchimp's powerful email marketing features into your WordPress website. Effortlessly create custom opt-in forms, sync user data, and automate email campaigns. Engage your audience and drive successful email marketing with ease.
+Your WordPress website can easily incorporate Mailchimp's powerful email marketing features with the Mailchimp Block plugin. Automate email campaigns, sync user data and easily create custom opt-in forms Engage your audience and manage effective email marketing effortlessly.
+
+Email storage makes it easy to communicate with your users. Many themes are available for you to add and modify as you like. To add visual appeal to your email templates, you can include various images and graphics. You can easily create a variety of messages, including newsletters, product promotions and event information, to diversify your communication strategy.
 
 
-**[Demos](https://bplugins.com/products/mailchimp-block/#demos)**
+**[Demos](https://bplugins.com/products/mailchimp-block/#demos) || [Get Pro Version](https://bplugins.com/products/mailchimp-block/#pricing)**
 
-= Features =
-- Responsive design. Your MailChimp forms will never look out of place, no matter which device your visitors are using.
-- The label, description, first name, and last name have a show/hide option.
-- Emails are stored in the MailChimp dashboard. Connecting MailChimp is very easy.
-- There are four forms available that you can use. You have the flexibility to customize the form layout, including changing the color, setting padding, and adjusting the border radius.
-- The button text can be easily changed to your desired text. You also have the option to customize the button's color, padding, and font typography to match your design preferences.
--Certainly! With the available options, you can set the color and typography separately for the success message and error message. This allows you to customize the appearance of each message type according to your preferences.
+## Here are the best MailChimp Blocks for WordPress ★★★★★ ##
 
+Mailchimp-block plugin has a variety of themes. You can easily design your website using themes. There are four different layouts: normal, modal, auto-popup, floating-top, and floating-bottom.
+
+MileChimp-Block includes short code support. Themes can be embedded anywhere. There are many patterns that can be imported with a single click. Themes are transformed into patterns.
+
+## Who is the Mailchimp block designed for? ##
+ 
+* **Marketers and Influencers** 
+* **Online Course Providers**
+* **Non-Profit Organizations**
+* **Event Planners and Promoters**
+* **Real Estate Agents and Brokers**
+* **Subscription Box Services**
+* **Travel Agencies and Tour Operators**
+* **Restaurants and Food Services**
+* **Health and Wellness Coaches**
+
+Mailchimp Block is a simple way to collect user feedback via email. Milechimp Block allows users to easily express their opinions, and organizations can act on their feedback. This block allows users to create inline forms, which is extremely convenient.
+
+
+### Mailchimp-Block Revolutionary Features ###
+
+See the features that make Mailchimp-Block for Mailchimp the **Greatest WordPress MailChimp-Block**.
+
+* Responsive design. Your MailChimp forms will never look out of place, no matter which device your visitors are using.
+* The label, description, first name, and last name have a show/hide option.
+* Emails are stored in the MailChimp dashboard. Connecting MailChimp is very easy.
+* There are four forms available that you can use. You have the flexibility to customize the form layout, including changing the color, setting padding, and adjusting the border radius.
+* The button text can be easily changed to your desired text. You also have the option to customize the button's color, padding, and font typography to match your design preferences.
+* Certainly! With the available options, you can set the color and typography separately for the success message and error message. This allows you to customize the appearance of each message type according to your preferences.
+
+= Mailchimp-Block Revolutionary Pro Features =
+
+- **Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom**
+- **Ten distinct themes: Default, Theme 1, Theme 2, Theme 3, Theme 4, Theme 5, Theme 6, Theme 7, Theme 8, and Theme 9**
+- **Customizable margins for labels, descriptions, and buttons**
+- **Added shortcode support for easy embedding**
+- **Multiple pattern configurations for a tailored look**
+- **Configurable auto-popup layout duration**
+- **Supports logo uploads for seamless branding**
+
+
+### Why is Mailchimp-Block for Mailchimp so revolutionary? ###
+
+* **Configuration** — Authorize your Mailchimp account and show your audience list.
+
+* **Audience** — Select your audience.
+
+* **Layout**— There are five different layouts: normal, modal, auto-popup, floating-top, and floating-bottom.
+
+* **Theme**— There are eleven different types of themes: default, theme 1, theme 2, theme 3, theme 4, theme 5, theme 6, theme 7, theme 8, theme 9, and theme 10.
+
+* **Responsive Design** — The website runs smoothly on mobile and tablet devices, improving the user experience.
+
+* **Customization** - The website design and features can be tailored to your specific needs.
+
+#### Mailchimp-Block is perfect for: ####
+✔ Business Websites
+✔ Course Creators
+✔ Coaches / Trainers
+✔ eCommerce Store Owners
+✔ Businesses
+✔ Local Businesses
+✔ Startups
+✔ Personal Brands
+✔ Real Estate Agents
+✔ Artists & Photographers
+✔ E-Commerce Sites
 
 = How to use =
 - Go to the Plugins Menu in WordPress
@@ -111,8 +174,31 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 7. Theme One Customize
 8. Theme Two Customize
 9. Theme Three Customize
- 
+10. Floating Top
+11. Form 8 Customization
+12. Form 9 Customization
+13. Form 10 Customizable
+14. Form 1 Customization
+15. Form Popup Design
+16. Floating Top Design
+17. Form 4 Default Design
+18. Form 5 Default Design
+19. Form 5 Customization
+20. Form 6 Default Design
+
+
 == Changelog ==
+
+= 1.1.1 - 5 Nov, 24 =
+* Pro Feature List
+* Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom.
+* Ten distinct themes: Default, Theme 1, Theme 2, Theme 3, Theme 4, Theme 5, Theme 6, Theme 7, Theme 8, and Theme 9.
+* Customizable margins for labels, descriptions, and buttons.
+* Added shortcode support for easy embedding.
+* Multiple pattern configurations for a tailored look.
+* Configurable auto-popup layout duration.
+* Supports logo uploads for seamless branding.
+
 
 = 1.1.0 - 8 July, 24 =
 * OAuth authorization system added.
@@ -155,6 +241,16 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.1.1 - 5 Nov, 24 =
+* Pro Feature List
+* Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom.
+* Ten distinct themes: Default, Theme 1, Theme 2, Theme 3, Theme 4, Theme 5, Theme 6, Theme 7, Theme 8, and Theme 9.
+* Customizable margins for labels, descriptions, and buttons.
+* Added shortcode support for easy embedding.
+* Multiple pattern configurations for a tailored look.
+* Configurable auto-popup layout duration.
+* Supports logo uploads for seamless branding.
 
 = 1.1.0 - 8 July, 24 =
 * OAuth authorization system added.

@@ -2,36 +2,78 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mailchimp block 1.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mailchimp-block\n"
+"Project-Id-Version: Mailchimp block 1.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-for-mailchimp-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-08T08:29:31+00:00\n"
+"POT-Creation-Date: 2024-11-05T06:26:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: mail-collections\n"
 
 #. Plugin Name of the plugin
-#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+#: D:\Ampps\www\wordpress\wp-content\plugins\block-for-mailchimp-pro\index.php
 msgid "Mailchimp block"
 msgstr ""
 
 #. Description of the plugin
-#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+#: D:\Ampps\www\wordpress\wp-content\plugins\block-for-mailchimp-pro\index.php
 msgid "Connect your MailChimp with your WordPress."
 msgstr ""
 
 #. Author of the plugin
-#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+#: D:\Ampps\www\wordpress\wp-content\plugins\block-for-mailchimp-pro\index.php
 msgid "bPlugins"
 msgstr ""
 
 #. Author URI of the plugin
-#: D:\Ampps\www\wordpress\wp-content\plugins\mailchimp-block\index.php
+#: D:\Ampps\www\wordpress\wp-content\plugins\block-for-mailchimp-pro\index.php
 msgid "http://bplugins.com"
+msgstr ""
+
+#: shortCode.php:22
+#: shortCode.php:23
+msgid "Mailchimp Block"
+msgstr ""
+
+#: shortCode.php:24
+#: shortCode.php:25
+msgid "Add New"
+msgstr ""
+
+#: shortCode.php:26
+msgid "Edit"
+msgstr ""
+
+#: shortCode.php:27
+msgid "New"
+msgstr ""
+
+#: shortCode.php:28
+msgid "View"
+msgstr ""
+
+#: shortCode.php:29
+msgid "Search"
+msgstr ""
+
+#: shortCode.php:30
+msgid "Sorry, we couldn't find the that you are looking for."
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Minutes"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Hours"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Day"
 msgstr ""
 
 #: dist/editor.js:1
@@ -44,6 +86,26 @@ msgstr ""
 
 #: dist/editor.js:1
 msgid "Right"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Normal"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Modal"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Auto Popup"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Floating Top"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Floating Bottom"
 msgstr ""
 
 #: dist/editor.js:1
@@ -63,11 +125,43 @@ msgid "Theme 3"
 msgstr ""
 
 #: dist/editor.js:1
+msgid "Theme 4"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 5"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 6"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 7"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 8"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 9"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Theme 10"
+msgstr ""
+
+#: dist/editor.js:1
 msgid "General"
 msgstr ""
 
 #: dist/editor.js:1
 msgid "Style"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Patterns"
 msgstr ""
 
 #: dist/editor.js:1
@@ -107,7 +201,51 @@ msgid "Last Name"
 msgstr ""
 
 #: dist/editor.js:1
+msgid "Input Label"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Layout"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Placement"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Time"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Cache"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Type"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Logo"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Upload"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Size"
+msgstr ""
+
+#: dist/editor.js:1
 msgid "Button"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Popup Button"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Text"
 msgstr ""
 
 #: dist/editor.js:1
@@ -163,6 +301,10 @@ msgid "Border"
 msgstr ""
 
 #: dist/editor.js:1
+msgid "Info Area"
+msgstr ""
+
+#: dist/editor.js:1
 msgid "Background"
 msgstr ""
 
@@ -179,6 +321,18 @@ msgid "Typography"
 msgstr ""
 
 #: dist/editor.js:1
+msgid "Margin"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Image"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Height:"
+msgstr ""
+
+#: dist/editor.js:1
 msgid "Input"
 msgstr ""
 
@@ -187,11 +341,19 @@ msgid "Colors"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Margin"
+msgid "Hovers Colors"
 msgstr ""
 
 #: dist/editor.js:1
-msgid "Hovers Colors"
+msgid "Align"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Hover Colors"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "Close Icon"
 msgstr ""
 
 #: dist/editor.js:1
@@ -200,6 +362,10 @@ msgstr ""
 
 #: dist/editor.js:1
 msgid "You must select an audience"
+msgstr ""
+
+#: dist/editor.js:1
+msgid "This preview is only visible in the frontend"
 msgstr ""
 
 #: dist/editor.js:1
