@@ -2,9 +2,9 @@
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
-Requires at least: 5.0+
-Tested up to: 6.6.2
-Stable tag: 1.1.1
+Requires at least: 6.5+
+Tested up to: 6.7.1
+Stable tag: 1.1.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -189,6 +189,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.1.2 - 23 Nov, 2024 =
+* _load_textdomain_just_in_time notice solved
+
 = 1.1.1 - 5 Nov, 24 =
 * Pro Feature List
 * Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom.
@@ -241,6 +244,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.1.2 - 23 Nov, 2024 =
+* _load_textdomain_just_in_time notice solved
 
 = 1.1.1 - 5 Nov, 24 =
 * Pro Feature List

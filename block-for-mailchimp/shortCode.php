@@ -78,23 +78,6 @@ if(!class_exists("mcbCustomPost")) {
 			}
 			return $use;
 		}
-
-		// function add_option_in_general_settings(){
-		// 	register_setting(
-		// 	'general',    
-		// 	'mcb_block_option', 
-		// 	'sanitize_text_field' 
-		// );
-  
-		// add_settings_field(
-		// 	'mcb_block_option_field', 
-		// 	'Hide MailChimp Block From Admin Menu',    
-		// 	array($this , "mcb_block_option_callback"), 
-		// 	'general'                 
-		// );
-  
-		// }
-  
 	 
 	}
 	new mcbCustomPost();

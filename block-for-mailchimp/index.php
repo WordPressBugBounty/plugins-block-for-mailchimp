@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mailchimp block
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -28,26 +28,12 @@ if (function_exists('mcb_fs')) {
 
 } else {
     // Constant
-    define('MCB_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.1');
+    define( 'MCB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.2' );
     define('MCB_DIR', plugin_dir_url(__FILE__));
     define('MCB_DIR_PATH', plugin_dir_path(__FILE__));
     define('MCB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     define('MCB_IS_FREE', 'block-for-mailchimp/index.php' === plugin_basename(__FILE__));
     define('MCB_IS_PRO', 'block-for-mailchimp-pro/index.php' === plugin_basename(__FILE__)); 
-
-    // if (!function_exists('mcb_init')) {
-    //     function mcb_init()
-    //     {
-    //         global $mcb_bs;
-    //         require_once plugin_dir_path(__FILE__) . 'bplugins_sdk/init.php';
-    //         $mcb_bs = new BPlugins_SDK(__FILE__);
-
-    //     }
-    //     mcb_init();
-    // } else {
-    //     $mcb_bs->uninstall_plugin(__FILE__);
-    // }
-
      
     // Create a helper function for easy SDK access.
     function mcb_fs()
