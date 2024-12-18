@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Mailchimp block
+ * Plugin Name: Block For MailChimp
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -28,7 +28,7 @@ if (function_exists('mcb_fs')) {
 
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.2' );
+    define( 'MCB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.3' );
     define('MCB_DIR', plugin_dir_url(__FILE__));
     define('MCB_DIR_PATH', plugin_dir_path(__FILE__));
     define('MCB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
@@ -107,6 +107,35 @@ if (function_exists('mcb_fs')) {
             add_action('rest_api_init', [$this, 'registerSettings']);
 
             add_action( 'admin_init', [$this, 'add_option_in_general_settings'], 10 );
+
+            if(!MCB_IS_PRO){
+                add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 ); 
+            }
+            add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
+        }
+
+        public function plugin_action_links($links, $file) {
+        
+            if( plugin_basename( __FILE__ ) == $file ) {
+                $links['go_pro'] = sprintf( '<a href="%s" style="%s" target="__blank">%s</a>', 'https://bplugins.com/products/mailchimp-block/#pricing', 'color:#4527a4;font-weight:bold', __( 'Go Pro!', 'slider' ) );
+            }
+    
+            return $links;
+        }
+
+
+        // Extending row meta 
+        public function insert_plugin_row_meta($links, $file)
+        {
+            if (plugin_basename( __FILE__ ) == $file) {
+                // docs & faq
+                $links[] = sprintf('<a href="https://bplugins.com/docs/mailchimp-block/" target="_blank">' . __('Docs & FAQs', 'mail-collections') . '</a>');
+
+                // Demos
+                $links[] = sprintf('<a href="https://bplugins.com/products/mailchimp-block/#demos" target="_blank">' . __('Demos', 'mail-collections') . '</a>');
+            }
+
+            return $links;
         }
 
         public function mcbPipeChecker() {
