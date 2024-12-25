@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Block For MailChimp
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.3
+ * Version: 1.1.4
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -28,7 +28,7 @@ if (function_exists('mcb_fs')) {
 
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.3' );
+    define( 'MCB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.4' );
     define('MCB_DIR', plugin_dir_url(__FILE__));
     define('MCB_DIR_PATH', plugin_dir_path(__FILE__));
     define('MCB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
@@ -259,6 +259,27 @@ if (function_exists('mcb_fs')) {
             wp_set_script_translations('mcb-mailchimp-editor-script', 'mail-collections', plugin_dir_path(__FILE__) . 'languages'); // Translate
         }
 
+        // Encode Access Token
+        public function scramble($do = 'encode', $data = ''){
+            $originalKey = 'abcdefghijklmnopqrstuvwxyz1234567890';
+            $key = "gteb2xnwloyz4h751icrp98vu63qmasfdj0k";
+            $resultData = '';
+            if($do == 'encode'){
+                if($data != ''){
+                    $length = strlen($data);
+                    for($i = 0; $i < $length; $i++){
+                        $position = strpos($originalKey, $data[$i]);
+                        if($position !== false){
+                            $resultData .= $key[$position];
+                        }else {
+                            $resultData .= $data[$i];
+                        }
+                    }
+                }
+            }
+            return $resultData;
+        }
+
         public function render($attributes)
         {
             extract($attributes);
@@ -269,13 +290,17 @@ if (function_exists('mcb_fs')) {
             wp_enqueue_style('mcb-mailchimp-style');
             wp_enqueue_script('mcb-script');
 
+             
+
+            $mcbInfo = $this->scramble('encode', get_option('mcb-email-collect') );
+            // $mcbInfo =  get_option('mcb-email-collect');
+            
             ob_start();?>
-            <div class='<?php echo esc_attr($mcbBlockClassName); ?>' id='mcbMailChimp-<?php echo esc_attr($cId) ?>' data-attributes='<?php echo esc_attr(wp_json_encode($attributes)); ?>' data-mcbInfo='<?php echo esc_attr(get_option('mcb-email-collect')); ?>'></div>
+            <div class='<?php echo esc_attr($mcbBlockClassName); ?>' id='mcbMailChimp-<?php echo esc_attr($cId) ?>' data-attributes='<?php echo esc_attr(wp_json_encode($attributes)); ?>' data-mcbInfo='<?php echo esc_attr($mcbInfo); ?>'></div>
 
             <?php return ob_get_clean();
         } // Render
     }
     new MCBMailChimp();
     require_once plugin_dir_path(__FILE__) . '/mailchimp/API.php';
-    
-}    
+}
