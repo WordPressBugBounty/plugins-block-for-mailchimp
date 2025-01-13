@@ -9,7 +9,7 @@
 		"mailchimp",
 		"marketing"
 	],
-	"textdomain": "mail-collections",
+	"textdomain": "block-for-mailchimp",
 	"attributes": {
 		"align": {
 			"type": "string",

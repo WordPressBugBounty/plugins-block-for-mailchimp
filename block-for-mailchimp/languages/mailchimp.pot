@@ -1,18 +1,18 @@
-# Copyright (C) 2024 bPlugins
+# Copyright (C) 2025 bPlugins
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Block For MailChimp 1.1.4\n"
+"Project-Id-Version: Block For MailChimp 1.1.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-for-mailchimp-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-25T10:13:25+00:00\n"
+"POT-Creation-Date: 2025-01-13T03:43:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
-"X-Domain: mail-collections\n"
+"X-Domain: block-for-mailchimp\n"
 
 #. Plugin Name of the plugin
 #: index.php
@@ -34,12 +34,54 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
+#: AdminMenu.php:26
+#: AdminMenu.php:27
+msgid "Mailchimp"
+msgstr ""
+
+#: AdminMenu.php:39
+#: AdminMenu.php:40
+msgid "ShortCode"
+msgstr ""
+
+#: index.php:121
+msgid "Go Pro!"
+msgstr ""
+
 #: index.php:133
 msgid "Docs & FAQs"
 msgstr ""
 
 #: index.php:136
 msgid "Demos"
+msgstr ""
+
+#: index.php:148
+msgid "Invalid Request"
+msgstr ""
+
+#: mailchimp/API.php:26
+msgid "Nonce is missing"
+msgstr ""
+
+#: mailchimp/API.php:34
+msgid "Invalid nonce"
+msgstr ""
+
+#: mailchimp/API.php:39
+msgid "Access token is required"
+msgstr ""
+
+#: mailchimp/API.php:54
+msgid "Failed to fetch data from Mailchimp"
+msgstr ""
+
+#: mailchimp/API.php:74
+msgid "Failed to fetch audience lists from Mailchimp"
+msgstr ""
+
+#: mailchimp/API.php:85
+msgid "Invalid response from Mailchimp"
 msgstr ""
 
 #: shortCode.php:22

@@ -19,15 +19,15 @@ if(!class_exists("mcbCustomPost")) {
 
 			register_post_type( $this->post_type, [
 				'labels'				=> [
-					'name'			=> __( 'Mailchimp Block', 'mail-collections'),
-					'singular_name'	=> __( 'Mailchimp Block', 'mail-collections' ),
-					'add_new'		=> __( 'Add New', 'mail-collections' ),
-					'add_new_item'	=> __( 'Add New', 'mail-collections' ),
-					'edit_item'		=> __( 'Edit', 'mail-collections' ),
-					'new_item'		=> __( 'New', 'mail-collections' ),
-					'view_item'		=> __( 'View', 'mail-collections' ),
-					'search_items'	=> __( 'Search', 'mail-collections'),
-					'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'mail-collections' )
+					'name'			=> __( 'Mailchimp Block', 'block-for-mailchimp' ),
+					'singular_name'	=> __( 'Mailchimp Block', 'block-for-mailchimp' ),
+					'add_new'		=> __( 'Add New', 'block-for-mailchimp' ),
+					'add_new_item'	=> __( 'Add New', 'block-for-mailchimp' ),
+					'edit_item'		=> __( 'Edit', 'block-for-mailchimp' ),
+					'new_item'		=> __( 'New', 'block-for-mailchimp' ),
+					'view_item'		=> __( 'View', 'block-for-mailchimp' ),
+					'search_items'	=> __( 'Search', 'block-for-mailchimp'),
+					'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'block-for-mailchimp' )
 				],
 				'public'				=> false,
 				'show_ui'				=> true, 		
@@ -64,11 +64,13 @@ if(!class_exists("mcbCustomPost")) {
 		}
 
 		function manageMCBPostsCustomColumns( $column_name, $post_ID ) {
+			$post_id = esc_attr( $post_ID ); // Escape the post ID for safe output
 			if ( $column_name == 'shortcode' ) {
-				echo "<div class='mcbFrontShortcode' id='mcbFrontShortcode-$post_ID'>
-					<input value='[mcb-block id=$post_ID]' onclick='mcbHandleShortcode( $post_ID )'>
-					<span class='tooltip'>Copy To Clipboard</span>
-				</div>";
+				// Escape the shortcode and HTML attributes properly
+				echo "<div class='mcbFrontShortcode' id='mcbFrontShortcode-" . esc_attr( $post_id ) . "'>
+						<input value='[mcb-block id=" . esc_attr( $post_id ) . "]' onclick='mcbHandleShortcode(" . esc_js( $post_id ) . ")'>
+						<span class='tooltip'>Copy To Clipboard</span>
+					  </div>";
 			}
 		}
 
@@ -82,3 +84,4 @@ if(!class_exists("mcbCustomPost")) {
 	}
 	new mcbCustomPost();
 }
+
