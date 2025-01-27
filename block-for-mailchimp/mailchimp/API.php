@@ -126,10 +126,9 @@ if(!class_exists('MailChimpApi')) {
             $lName = isset( $_GET['lName'] ) ? sanitize_text_field( wp_unslash( $_GET['lName'] )) : '';
             $endpoint_url = isset( $_GET['endpoint_url'] ) ? sanitize_text_field( wp_unslash($_GET['endpoint_url']) ) : '';
             $accessToken = $info['accessToken'];
+            
             $dc = substr($apiKey, strpos($apiKey, '-') + 1);
 
-            wp_send_json_success($accessToken);
-        
             $mailDataCenterList = ["us1", "us2", "us3", "us4", "us5", "us6", "us7", "us8", "us9", "us10", "us11", "us12", "us13", "us14", "us15", "us16", "us17", "us18", "us19", "us20"];
         
             if (!in_array($dc, $mailDataCenterList) && !$endpoint_url) {
@@ -219,13 +218,8 @@ if(!class_exists('MailChimpApi')) {
                 //throw $th;
                 wp_send_json_error('Something went wrong!');
             }
-
-            
-
-            // echo wp_send_json($res['body']);
         }
     }
     new MailChimpApi();
 }
-
  
