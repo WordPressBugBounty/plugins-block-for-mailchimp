@@ -47,23 +47,48 @@ if(!class_exists("mcbCustomPost")) {
 			]); // Register Post Type
 		}
 
-		function onAddShortcode( $atts ) {
+		public function onAddShortcode( $atts ) {
 			$post_id = $atts['id'];
 			$post = get_post( $post_id );
+			if ( !$post ) {
+				return '';
+			}
+			if ( post_password_required( $post ) ) {
+				return get_the_password_form( $post );
+			}
+			switch ( $post->post_status ) {
+				case 'publish':
+					return $this->displayContent( $post );
+				case 'private':
+					if (current_user_can('read_private_posts')) {
+						return $this->displayContent( $post );
+					}
+					return '';
+				case 'draft':
+				case 'pending':
+				case 'future':
+					if ( current_user_can( 'edit_post', $post_id ) ) {
+						return $this->displayContent( $post );
+					}
+					return '';
+				default:
+					return '';
+			}
+		}
 
+		public function displayContent( $post ){
 			$blocks = parse_blocks( $post->post_content );
-
 			return render_block( $blocks[0] );
 		}
 
-		function manageMCBPostsColumns( $defaults ) {
+		public function manageMCBPostsColumns( $defaults ) {
 			unset( $defaults['date'] );
 			$defaults['shortcode'] = 'ShortCode';
 			$defaults['date'] = 'Date';
 			return $defaults;
 		}
 
-		function manageMCBPostsCustomColumns( $column_name, $post_ID ) {
+		public function manageMCBPostsCustomColumns( $column_name, $post_ID ) {
 			$post_id = esc_attr( $post_ID ); // Escape the post ID for safe output
 			if ( $column_name == 'shortcode' ) {
 				// Escape the shortcode and HTML attributes properly
@@ -74,7 +99,7 @@ if(!class_exists("mcbCustomPost")) {
 			}
 		}
 
-		function useBlockEditorForPost($use, $post){
+		public function useBlockEditorForPost($use, $post){
 			if ($this->post_type === $post->post_type) {
 				return true;
 			}
