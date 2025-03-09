@@ -66,7 +66,7 @@ if(!class_exists('MailChimpApi')) {
                 $response = wp_remote_get($url, [
                     "method" => "GET",
                     "headers" => [
-                        "Authorization" => "Bearer " . $accessToken,
+                        "Authorization" => "Bearer " . $accessToken, 
                     ],
                 ]);
         
