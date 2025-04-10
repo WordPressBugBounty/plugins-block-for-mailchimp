@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5+
-Tested up to: 6.7.2
+Tested up to: 6.7.2 
 Stable tag: 1.1.9
 Requires PHP: 7.1
 License: GPLv3 or later
