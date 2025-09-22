@@ -1,0 +1,1251 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/admin/dashboard.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboard {
+  width: calc(100% + 20px);
+  max-width: calc(100% + 20px);
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(250, 167, 43, 0.1333333333) 0%, rgba(43, 105, 250, 0) 100%), radial-gradient(circle at 10% 60%, rgba(86, 235, 255, 0.2470588235), transparent 25%), radial-gradient(circle at 90% 70%, rgba(247, 17, 122, 0.1215686275), transparent 20%), repeating-linear-gradient(to right, rgba(72, 87, 129, 0.0666666667) 0px, rgba(72, 87, 129, 0.0666666667) 1px, transparent 1px, transparent 50px), repeating-linear-gradient(to bottom, rgba(72, 87, 129, 0.0666666667) 0px, rgba(72, 87, 129, 0.0666666667) 1px, transparent 1px, transparent 50px);
+  margin: 0 -20px 0 -20px;
+}
+.bPlDashboard * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+.bPlDashboard .bPlDashboardContainer {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.bPlDashboard .bPlDashboardMain .bPlDashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px 0;
+}
+.bPlDashboard .bPlDashboardBox {
+  background-color: #fff;
+  border: 1px solid rgba(72, 87, 129, 0.5);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 0px 0px rgba(20, 10, 245, 0.2);
+}
+.bPlDashboard .bPlDashboardButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Components/Button/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlButton {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 0.5em;
+  outline: 0;
+  z-index: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.bPlButton svg {
+  fill: currentColor;
+  width: 1.2em;
+  height: 1.2em;
+}
+.bPlButton:hover, .bPlButton:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.bPlButton.variant-primary, .bPlButton.variant-secondary {
+  color: #fff;
+}
+.bPlButton.variant-primary::before, .bPlButton.variant-secondary::before {
+  background: #070127;
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+.bPlButton.variant-primary:hover::before, .bPlButton.variant-secondary:hover::before {
+  width: 100%;
+}
+.bPlButton.variant-primary.white::before, .bPlButton.variant-secondary.white::before {
+  background: #fff;
+}
+.bPlButton.variant-primary {
+  background: #146EF5;
+}
+.bPlButton.variant-primary.white:hover {
+  color: #146EF5;
+}
+.bPlButton.variant-primary.outline {
+  color: #146EF5;
+  background: transparent;
+  border: 2px solid #146EF5;
+}
+.bPlButton.variant-primary.outline::before {
+  background: #146EF5;
+}
+.bPlButton.variant-primary.outline:hover {
+  color: #fff;
+}
+.bPlButton.variant-primary.outline.white {
+  color: #fff;
+  border: 2px solid #fff;
+}
+.bPlButton.variant-primary.outline.white::before {
+  background: #fff;
+}
+.bPlButton.variant-primary.outline.white:hover {
+  color: #146EF5;
+}
+.bPlButton.variant-secondary {
+  background: #FF7A00;
+}
+.bPlButton.variant-secondary.white:hover {
+  color: #FF7A00;
+}
+.bPlButton.variant-secondary.outline {
+  color: #FF7A00;
+  background: transparent;
+  border: 2px solid #FF7A00;
+}
+.bPlButton.variant-secondary.outline::before {
+  background: #FF7A00;
+}
+.bPlButton.variant-secondary.outline:hover {
+  color: #fff;
+}
+.bPlButton.size-medium {
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.bPlButton.size-small {
+  font-size: 12px;
+  padding: 6px 14px;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Components/Loading/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlLoading .loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.bPlLoading .loadingContent.horizontal {
+  flex-direction: row;
+}
+.bPlLoading .loadingContent .loadingSpinner {
+  width: 2rem;
+  height: 2rem;
+  border: 4px solid #146EF5;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: bPlLoadingSpin 1s linear infinite;
+}
+.bPlLoading .loadingContent .loadingText {
+  color: #485781;
+  font-size: 18px;
+}
+@keyframes bPlLoadingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Demos/ListDemos.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardListDemos {
+  max-width: 100%;
+  min-height: 600px;
+  height: calc(100dvh - 160px - var(--wp-admin--admin-bar--height, 32px));
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1019607843), 0 8px 10px -6px rgba(0, 0, 0, 0.1019607843);
+}
+.bPlDashboardListDemos .sidebar {
+  min-width: 320px;
+  color: #fff;
+  background: #070127;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.bPlDashboardListDemos .sidebar .sidebarHeader {
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+.bPlDashboardListDemos .sidebar .sidebarHeader h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.bPlDashboardListDemos .sidebar .sidebarHeader p {
+  font-size: 15px;
+  color: #9ca3af;
+  margin: 0;
+}
+.bPlDashboardListDemos .sidebar .sidebarHeader .bPlDashboardButtons {
+  display: none;
+}
+.bPlDashboardListDemos .sidebar .sidebarList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 15px;
+  overflow: auto;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button {
+  width: 100%;
+  text-align: left;
+  color: #d1d5db;
+  background-color: #1f2937;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .iconBox {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #eff2f6;
+  background-color: #374151;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .iconBox svg {
+  fill: #eff2f6;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .iconBox svg {
+  width: 15px;
+  height: 15px;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .texts {
+  flex: 1;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .texts h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #eff2f6;
+  margin: 0 0 4px 0;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .texts p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8da2bf;
+  margin: 0;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button .texts .category {
+  font-size: 12px;
+  font-weight: 400;
+  display: inline-block;
+  color: #adbcd1;
+  background-color: #374151;
+  padding: 4px 8px;
+  border-radius: 100px;
+  margin-top: 8px;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover {
+  color: white;
+  background-color: #374151;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover .iconBox {
+  color: #fff;
+  background-color: #4b5563;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover .iconBox svg {
+  fill: #fff;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover .texts h4 {
+  color: white;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover .texts p {
+  color: #ced7e3;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button:hover .texts .category {
+  color: #ced7e3;
+  background-color: #4b5563;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active {
+  color: white;
+  background-color: #146EF5;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1019607843);
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active .iconBox {
+  color: #fff;
+  background-color: var(--theme-color-400);
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active .iconBox svg {
+  fill: #fff;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active .texts h4 {
+  color: #fff;
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active .texts p {
+  color: var(--theme-color-100);
+}
+.bPlDashboardListDemos .sidebar .sidebarList button.active .texts .category {
+  color: var(--theme-color-100);
+  background-color: var(--theme-color-400);
+}
+.bPlDashboardListDemos .sidebar .sidebarList::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.bPlDashboardListDemos .sidebar .sidebarList::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.bPlDashboardListDemos .sidebar .sidebarList::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #b9b9b9;
+}
+.bPlDashboardListDemos .main {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.bPlDashboardListDemos .main .mainHeader {
+  padding: 18px 15px;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+}
+.bPlDashboardListDemos .main .mainHeader .headerInfo h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+.bPlDashboardListDemos .main .mainHeader .headerInfo p {
+  font-size: 14px;
+  margin: 0;
+}
+.bPlDashboardListDemos .main .canvas {
+  flex: 1 1 0%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.bPlDashboardListDemos .main .canvas .bPlLoading {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.bPlDashboardListDemos .main .canvas iframe {
+  flex: 1 1 0%;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border: none;
+}
+.bPlDashboardListDemos .main .canvas .canvasImg {
+  text-align: center;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: auto;
+  overflow: hidden;
+}
+.bPlDashboardListDemos .main .canvas .canvasImg img {
+  max-width: 100%;
+  transition: all 1s ease;
+}
+.bPlDashboardListDemos .main .mainFooter {
+  font-size: 14px;
+  color: #4b5563;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+.bPlDashboardListDemos .main .mainFooter .status {
+  display: flex;
+  align-items: center;
+}
+.bPlDashboardListDemos .main .mainFooter .status .statusDot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 9999px;
+  margin-right: 8px;
+}
+.bPlDashboardListDemos .main .mainFooter .demoLink {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: underline !important;
+  color: #146EF5;
+}
+.bPlDashboardListDemos .main .mainFooter .demoLink svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .bPlDashboardListDemos {
+    flex-direction: column;
+  }
+  .bPlDashboardListDemos .sidebar {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarHeader .bPlDashboardButtons {
+    display: flex;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList {
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 8px 16px 8px;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList button {
+    width: auto;
+    min-width: 200px;
+    align-items: center;
+    padding: 12px 16px;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList button .texts h4 {
+    margin: 0;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList button .texts p {
+    display: none;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList button .texts .category {
+    display: none;
+  }
+  .bPlDashboardListDemos .sidebar .sidebarList button .externalIcon {
+    display: none;
+  }
+  .bPlDashboardListDemos .main {
+    width: 100%;
+  }
+  .bPlDashboardListDemos .main .mainHeader {
+    display: none;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Pricing/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardPricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+}
+.bPlDashboardPricing .cycles {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b3d5fd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.bPlDashboardPricing .cycles button {
+  font-size: 15px;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+}
+.bPlDashboardPricing .cycles button span {
+  color: #fff;
+  background-color: #0b8e41;
+  padding: 4px 10px;
+  border-radius: 50px;
+  line-height: 1.3;
+  margin-left: 8px;
+}
+.bPlDashboardPricing .cycles button:not(:last-child) {
+  border-right: 1px solid #b3d5fd;
+}
+.bPlDashboardPricing .cycles button.active {
+  background-color: #e1efff;
+}
+@media only screen and (max-width: 640px) {
+  .bPlDashboardPricing .cycles {
+    flex-direction: column;
+  }
+  .bPlDashboardPricing .cycles button {
+    width: 100%;
+  }
+  .bPlDashboardPricing .cycles button:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #b3d5fd;
+  }
+}
+.bPlDashboardPricing .plans {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr));
+  container-type: inline-size;
+  gap: 20px;
+  padding: 0;
+}
+.bPlDashboardPricing .plans .plan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 25px 35px 25px 25px;
+  border: 1px solid #e7e7ec;
+  border-radius: 5px;
+  margin: 0;
+}
+.bPlDashboardPricing .plans .plan .planName {
+  margin-bottom: 20px;
+}
+.bPlDashboardPricing .plans .plan .priceWrap {
+  color: #146EF5;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.bPlDashboardPricing .plans .plan .priceWrap .price {
+  font-size: clamp(30px, 30px + (1vw - 3.2px) * 2.438, 56px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  color: inherit;
+  display: flex;
+  align-items: end;
+  margin-bottom: 0;
+}
+.bPlDashboardPricing .plans .plan .priceWrap .price small {
+  font-size: clamp(17px, 17px + (1vw - 3.2px) * 1.01, 28px);
+  line-height: 1.4;
+}
+.bPlDashboardPricing .plans .plan .priceWrap .prefix,
+.bPlDashboardPricing .plans .plan .priceWrap .suffix {
+  font-size: clamp(17px, 17px + (1vw - 3.2px) * 1.01, 28px);
+  line-height: 1.4;
+  color: inherit;
+  align-self: end;
+  margin-bottom: 0;
+}
+.bPlDashboardPricing .plans .plan .note {
+  font-size: clamp(15px, 15px + (1vw - 3.2px) * 0.739, 22px);
+  margin-bottom: 20px;
+}
+.bPlDashboardPricing .plans .plan .features {
+  font-size: 18px;
+  color: #485781;
+  margin-bottom: 0;
+}
+.bPlDashboardPricing .plans .plan .features:not(:last-child) {
+  margin-bottom: 20px;
+}
+.bPlDashboardPricing .plans .plan .features li {
+  position: relative;
+  padding-left: 1.875rem;
+  margin-bottom: 0;
+}
+.bPlDashboardPricing .plans .plan .features li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.bPlDashboardPricing .plans .plan .features li::before {
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxZW0nIGhlaWdodD0nMWVtJyB2aWV3Qm94PScwIDAgMTAwMCAxMDAwJyBmaWxsPScjNDg1NzgxJz48cGF0aCBkPSdtMzQxLjk4IDcwMS42N2w1NDguMDgtNTQwLjU0cTE5LjQtMTkuMTMgNDUuMjctMTkuMTMgMjUuODcgMCA0NS4yNyAxOS4xMyAxOS40IDE5LjE0IDE5LjQgNDUuNDUgMCAyNi4zMS0xOS40IDQ1LjQ0bC01OTMuMzUgNTg2Ljc4cS0xOS40MSAxOS4xMy00NS4yNyAxOS4xMy0yNS44NyAwLTQ1LjI3LTE5LjEzbC0yNzguMDktMjc0LjI2cS0xOS40LTE5LjEzLTE4LjU5LTQ1LjQ0IDAuODEtMjYuMzEgMjAuMjEtNDUuNDQgMTkuNC0xOS4xNCA0Ni4wOC0xOS4xNCAyNi42NyAwIDQ2LjA4IDE5LjE0eicgLz48L3N2Zz4=);
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+}
+.bPlDashboardPricing .plans .plan .bPlButton {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 0;
+  justify-content: center;
+}
+.bPlDashboardPricing .plans .plan .bPlButton:not(:last-child) {
+  margin-bottom: 20px;
+}
+.bPlDashboardPricing .plans .plan.bestValue {
+  position: relative;
+  color: #fff;
+  background-color: #146EF5;
+}
+.bPlDashboardPricing .plans .plan.bestValue::before {
+  content: attr(data-best-text);
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  writing-mode: vertical-lr;
+  color: #fff;
+  background-color: #FF7A00;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+  position: absolute;
+  top: -1px;
+  right: 14px;
+  padding: 15px 9px 30px 9px;
+}
+.bPlDashboardPricing .plans .plan.bestValue .planName,
+.bPlDashboardPricing .plans .plan.bestValue .priceWrap,
+.bPlDashboardPricing .plans .plan.bestValue .note,
+.bPlDashboardPricing .plans .plan.bestValue .features {
+  color: #fff;
+}
+.bPlDashboardPricing .plans .plan.bestValue .features li::before {
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxZW0nIGhlaWdodD0nMWVtJyB2aWV3Qm94PScwIDAgMTAwMCAxMDAwJyBmaWxsPScjZmZmJz48cGF0aCBkPSdtMzQxLjk4IDcwMS42N2w1NDguMDgtNTQwLjU0cTE5LjQtMTkuMTMgNDUuMjctMTkuMTMgMjUuODcgMCA0NS4yNyAxOS4xMyAxOS40IDE5LjE0IDE5LjQgNDUuNDUgMCAyNi4zMS0xOS40IDQ1LjQ0bC01OTMuMzUgNTg2Ljc4cS0xOS40MSAxOS4xMy00NS4yNyAxOS4xMy0yNS44NyAwLTQ1LjI3LTE5LjEzbC0yNzguMDktMjc0LjI2cS0xOS40LTE5LjEzLTE4LjU5LTQ1LjQ0IDAuODEtMjYuMzEgMjAuMjEtNDUuNDQgMTkuNC0xOS4xNCA0Ni4wOC0xOS4xNCAyNi42NyAwIDQ2LjA4IDE5LjE0eicgLz48L3N2Zz4=);
+}
+.bPlDashboardPricing .plans .plan.bestValue .wp-element-button {
+  border: 1px solid #fff;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/FeatureCompare/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardFeatureCompare {
+  overflow-x: auto;
+}
+.bPlDashboardFeatureCompare table {
+  width: 100%;
+  min-width: 960px;
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+.bPlDashboardFeatureCompare table thead tr {
+  background-color: #fbf9fa;
+  background-color: rgba(5, 122, 253, 0.1215686275);
+  border-bottom: 1px solid #E7E7EC;
+}
+.bPlDashboardFeatureCompare table thead th {
+  min-width: 168px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  color: #070127;
+  padding: 16px 24px;
+}
+.bPlDashboardFeatureCompare table thead th:not(:first-child) {
+  text-align: center;
+}
+.bPlDashboardFeatureCompare table tbody tr {
+  border-bottom: 1px solid #E7E7EC;
+}
+.bPlDashboardFeatureCompare table tbody tr:last-child {
+  border-bottom: 0;
+}
+.bPlDashboardFeatureCompare table tbody td {
+  font-size: 14px;
+  padding: 16px 24px;
+}
+.bPlDashboardFeatureCompare table tbody td:first-child {
+  font-weight: 500;
+  color: #485781;
+}
+.bPlDashboardFeatureCompare table tbody td:not(:first-child) {
+  text-align: center;
+}
+.bPlDashboardFeatureCompare table tbody td > * {
+  display: inline-block;
+}
+.bPlDashboardFeatureCompare table tbody td svg {
+  fill: currentColor;
+  width: 28px;
+  height: 28px;
+}
+.bPlDashboardFeatureCompare table tbody td.icon.check {
+  color: #00c951;
+}
+.bPlDashboardFeatureCompare table tbody td.icon.cross {
+  color: #ff6c64;
+}
+.bPlDashboardFeatureCompare table tbody td.icon.cross svg {
+  width: 26px;
+  height: 26px;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Header/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardHeader {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.bPlDashboardHeader .pluginInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+  gap: 15px;
+}
+.bPlDashboardHeader .pluginInfo div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-flow: wrap;
+  gap: 15px;
+}
+.bPlDashboardHeader .pluginLogo {
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 3px;
+}
+.bPlDashboardHeader .pluginName {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  color: #070127;
+}
+.bPlDashboardHeader .pluginVersion {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #146EF5;
+  padding: 4px 12px;
+  border-radius: 5px;
+}
+.bPlDashboardHeader .navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 0 auto;
+}
+.bPlDashboardHeader .navLinks .bPlDashboardNav {
+  display: flex;
+  font-size: 16px;
+  gap: 30px;
+}
+.bPlDashboardHeader .navLinks .bPlDashboardNav .navLink {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #485781;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.bPlDashboardHeader .navLinks .bPlDashboardNav .navLink:hover {
+  border-bottom: 2px solid #070127;
+}
+.bPlDashboardHeader .navLinks .bPlDashboardNav .navLink.active {
+  border-bottom: 2px solid #070127;
+  color: #070127;
+}
+.bPlDashboardHeader .navLinks .bPlDashboardNav .navLink:focus {
+  box-shadow: none;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Overview/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardOverview {
+  display: flex;
+}
+.bPlDashboardOverview .overviewLeft {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1;
+}
+.bPlDashboardOverview .overviewLeft .overviewLeftTop {
+  padding: 25px 30px;
+}
+.bPlDashboardOverview .overviewLeft .overviewTitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: #070127;
+  margin-bottom: 10px;
+}
+.bPlDashboardOverview .overviewLeft .overviewDescription {
+  font-size: 18px;
+  color: #485781;
+  margin-bottom: 20px;
+}
+.bPlDashboardOverview .overviewLeft .overviewBanner {
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bPlDashboardOverview .overviewLeft .overviewBanner img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+.bPlDashboardOverview .overviewLeft .overviewPluginInfo {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bPlDashboardOverview .overviewLeft .overviewPluginInfo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.bPlDashboardOverview .overviewLeft .overviewPluginInfo div h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #070127;
+  margin-bottom: 5px;
+}
+.bPlDashboardOverview .overviewLeft .overviewPluginInfo div span {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #485781;
+  margin-right: 5px;
+}
+.bPlDashboardOverview .overviewLeft .overviewPluginInfo div a {
+  color: #146EF5;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.bPlDashboardOverview .overviewLeft .overviewLeftBottom {
+  justify-content: right;
+  padding: 20px 30px;
+  border-top: 1px solid rgba(72, 87, 129, 0.5);
+  margin-top: auto;
+}
+.bPlDashboardOverview .overviewRight {
+  min-width: 320px;
+  border-left: 1px solid rgba(72, 87, 129, 0.5);
+}
+.bPlDashboardOverview .overviewRight .helpInfoItem {
+  padding: 25px;
+}
+.bPlDashboardOverview .overviewRight .helpInfoItem:not(:last-child) {
+  border-bottom: 1px solid rgba(72, 87, 129, 0.5);
+}
+.bPlDashboardOverview .overviewRight .helpInfoItem h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #070127;
+  margin-bottom: 5px;
+}
+.bPlDashboardOverview .overviewRight .helpInfoItem p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #485781;
+  margin-bottom: 20px;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Overview/VideoPlayer.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlVideoPlayer {
+  position: relative;
+  max-width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.bPlVideoPlayer:hover .center-play-btn.pause {
+  opacity: 1;
+}
+.bPlVideoPlayer .bPlVideoPlayerYoutube {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.bPlVideoPlayer .bPlVideoPlayerYoutube iframe,
+.bPlVideoPlayer .bPlVideoPlayerYoutube object,
+.bPlVideoPlayer .bPlVideoPlayerYoutube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bPlVideoPlayer .video-element {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 70vh;
+}
+.bPlVideoPlayer .preview-video {
+  display: none;
+}
+.bPlVideoPlayer .center-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: #146ef5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.bPlVideoPlayer .center-play-btn.pause {
+  opacity: 0;
+}
+.bPlVideoPlayer .center-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.bPlVideoPlayer .center-play-btn .play-icon {
+  width: 32px;
+  height: 32px;
+  color: #dddddd;
+  display: grid;
+  place-items: center;
+}
+.bPlVideoPlayer .center-play-btn .play-icon svg.video-player-pause-icon {
+  fill: #dddddd;
+  width: 18px;
+}
+.bPlVideoPlayer .loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 5;
+}
+.bPlVideoPlayer .loading-spinner .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: bPlDashboardSpin 1s linear infinite;
+}
+.bPlVideoPlayer .video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bPlVideoPlayer .video-controls.visible {
+  opacity: 1;
+}
+.bPlVideoPlayer:hover .video-controls {
+  opacity: 1;
+}
+.bPlVideoPlayer .control-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bPlVideoPlayer .control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.bPlVideoPlayer .control-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.bPlVideoPlayer .time-display {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 80px;
+}
+.bPlVideoPlayer .time-display .separator {
+  opacity: 0.7;
+}
+.bPlVideoPlayer .progress-container {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+}
+.bPlVideoPlayer .progress-container .progress-bar {
+  position: relative;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+.bPlVideoPlayer .progress-container .progress-bar:hover {
+  height: 8px;
+}
+.bPlVideoPlayer .progress-container .progress-bar .progress-filled {
+  height: 100%;
+  background: #ff6b6b;
+  border-radius: 3px;
+}
+.bPlVideoPlayer .progress-container .progress-bar .progress-handle {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.bPlVideoPlayer .progress-container .progress-bar:hover .progress-handle {
+  opacity: 1;
+}
+.bPlVideoPlayer .progress-preview {
+  position: absolute;
+  bottom: 25px;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none;
+  width: 120px;
+}
+.bPlVideoPlayer .progress-preview .preview-thumbnail {
+  position: relative;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.bPlVideoPlayer .progress-preview .preview-thumbnail::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 0.9);
+}
+.bPlVideoPlayer .progress-preview .preview-video-display {
+  width: 120px;
+  height: 68px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  background: #000;
+}
+.bPlVideoPlayer .progress-preview .preview-time {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.bPlVideoPlayer .volume-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bPlVideoPlayer .volume-container .volume-slider {
+  width: 80px;
+  transition: opacity 0.2s ease;
+}
+.bPlVideoPlayer .volume-container .volume-bar {
+  position: relative;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.bPlVideoPlayer .volume-container .volume-bar .volume-filled {
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+.bPlVideoPlayer .volume-container .volume-bar .volume-handle {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.1s ease;
+}
+@media (max-width: 768px) {
+  .bPlVideoPlayer .center-play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .bPlVideoPlayer .center-play-btn .play-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .bPlVideoPlayer .video-controls {
+    padding: 15px 10px;
+    gap: 10px;
+  }
+  .bPlVideoPlayer .volume-container {
+    display: none;
+  }
+  .bPlVideoPlayer .time-display {
+    font-size: 12px;
+    min-width: 70px;
+  }
+  .bPlVideoPlayer .preview-video-display {
+    width: 100px;
+    height: 56px;
+  }
+  .bPlVideoPlayer .preview-time {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+@media (max-width: 480px) {
+  .bPlVideoPlayer .video-controls {
+    padding: 10px;
+    gap: 8px;
+  }
+  .bPlVideoPlayer .control-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .bPlVideoPlayer .progress-container {
+    margin: 0 5px;
+  }
+  .bPlVideoPlayer .preview-video-display {
+    width: 80px;
+    height: 45px;
+  }
+  .bPlVideoPlayer .progress-preview {
+    bottom: 20px;
+  }
+}
+.bPlVideoPlayer:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+.bPlVideoPlayer:fullscreen .video-element {
+  max-height: 100vh;
+  height: 100vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.bPlVideoPlayer:fullscreen .preview-video-display {
+  width: 160px;
+  height: 90px;
+}
+.bPlVideoPlayer:fullscreen .progress-preview {
+  bottom: 35px;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!../bpl-tools/Admin/Changelog/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.bPlDashboardChangelog {
+  background: #fff;
+  padding: 10px 30px !important;
+}
+.bPlDashboardChangelog .toggleArea h2 {
+  font-size: 22px;
+  color: #070127;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  cursor: pointer;
+}
+.bPlDashboardChangelog .toggleArea h2 svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: currentColor;
+}
+.bPlDashboardChangelog .changelogsWrap {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.bPlDashboardChangelog .changelogs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px 0;
+}
+.bPlDashboardChangelog .changelogs h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #070127;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.bPlDashboardChangelog .changelogs .list {
+  color: #485781;
+  font-size: 15px;
+  font-weight: 400;
+  list-style: inside;
+}
+
+/*# sourceMappingURL=admin-dashboard.css.map*/

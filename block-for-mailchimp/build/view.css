@@ -1,0 +1,409 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+.dashicons {
+  font-family: dashicons !important;
+}
+
+.wp-block-mcb-mailchimp {
+  width: 100%;
+  display: flex;
+}
+.wp-block-mcb-mailchimp * {
+  box-sizing: border-box;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  border: none;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form h2 {
+  padding: 0px;
+  text-align: center;
+  width: auto;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form p {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form input[type=text],
+.wp-block-mcb-mailchimp .mcbMailChimp .form input[type=email] {
+  min-height: 40px;
+  box-sizing: border-box;
+  margin: 0;
+  border: unset;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form .submitBtn {
+  position: relative;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form .submitBtn button {
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form .submitBtn .loader {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(93, 92, 92, 0.7490196078);
+  text-align: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .form .noticeElement > p {
+  margin: 0 auto;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: 500;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.default .form {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.default .form input[type=text],
+.wp-block-mcb-mailchimp .mcbMailChimp.default .form input[type=email] {
+  width: 100%;
+  min-height: 40px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.default .form .emailBtnEle {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.default .form .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 {
+  position: relative;
+  padding: 0px;
+  background-color: transparent;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .iconElement {
+  position: absolute;
+  width: 100%;
+  top: -35px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .iconElement .icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .iconElement .icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .form {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .form .emailBtnElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  margin-top: 30px;
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form1 .form .emailBtnElement {
+    flex-direction: column;
+  }
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form1 .form .emailBtnElement input[type=email] {
+  margin-bottom: 0px;
+  width: 100%;
+  flex: 1;
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form1 .form .emailBtnElement .submitBtn {
+    width: 100%;
+  }
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form1 .form .emailBtnElement .submitBtn button {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .iconElement .icon {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .form {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement {
+  position: relative;
+  margin-top: 30px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement input[type=email] {
+  margin-bottom: 0px;
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement .submitBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement .submitBtn {
+    position: unset;
+    width: 100%;
+  }
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement .submitBtn button {
+  height: 100%;
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form2 .form .emailBtnElement .submitBtn button {
+    width: 100%;
+  }
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form3 .form {
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form3 .form .nameElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  margin-top: 25px;
+}
+@media all and (max-width: 575px) {
+  .wp-block-mcb-mailchimp .mcbMailChimp.form3 .form .nameElement {
+    flex-direction: column;
+  }
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form3 .form .nameElement input[type=text] {
+  width: 100%;
+  min-height: 40px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form3 .form input[type=email] {
+  width: 100%;
+  margin: 0px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form3 .form .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form4 .form {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 0;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form4 .form .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form4 .form .right input {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form4 .form .right .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form5 .form .top {
+  height: 200px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form5 .form .bottom input {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form5 .form .bottom .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form6 .form {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form6 .form .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form6 .form .left input {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form6 .form .left .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form7 .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form7 .form h2 {
+  margin-bottom: 0px !important;
+  text-align: left !important;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form7 .form input {
+  margin-bottom: 0px !important;
+  flex-basis: 50%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form7 .form .submitBtn button {
+  height: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .top {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .top .left h2 {
+  text-align: left;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .top .left p {
+  text-align: left;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .top .right .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .bottom .content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .bottom .content .label {
+  font-size: 16px;
+  font-weight: 400;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .bottom .content input {
+  margin-bottom: 0px !important;
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp.form8 .form .bottom .submitBtn button {
+  width: 100%;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .popupBtnArea {
+  display: flex;
+  align-items: center;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .popupBtnArea .popupBtn {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 4px 5px;
+  display: block;
+  font-family: "Source Serif Pro";
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea .allForms .closeIcon {
+  position: absolute;
+  top: -43px;
+  right: 0px;
+  background: #000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaFBottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaFBottom .allForms {
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  margin: 0 auto;
+  width: 21%;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaNatural {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8117647059);
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaNatural .allForms {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 45%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaNatural .allForms .closeIcon {
+  top: -38px;
+  right: -37px;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaFTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaFTop .allForms {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 7px;
+  z-index: 99999;
+}
+.wp-block-mcb-mailchimp .mcbMailChimp .modalArea.modalAreaFTop .allForms .closeIcon {
+  top: 5px;
+  right: 10px;
+}
+
+/*# sourceMappingURL=view.css.map*/

@@ -30,7 +30,7 @@ if(!class_exists('MailChimpApi')) {
             $nonce = sanitize_text_field(wp_unslash($_GET['nonce']));
         
             // Verify the nonce
-            if (!wp_verify_nonce($nonce, 'wp_rest')) {
+            if (!wp_verify_nonce($nonce, 'mcbAllAudienceList')) {
                 wp_die(esc_html__('Invalid nonce', 'block-for-mailchimp'), '', ['response' => 403]);
             }
         
@@ -92,7 +92,7 @@ if(!class_exists('MailChimpApi')) {
         public function mcb_get_access_token () {
             
 
-            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ): '', 'wp_rest' ) ) {
+            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ): '', 'mcbAccessTokenGet' ) ) {
                 wp_die();
             }
             $state = isset( $_GET['state'] ) ? sanitize_text_field( wp_unslash( $_GET['state'] ) ) : '';
@@ -112,7 +112,7 @@ if(!class_exists('MailChimpApi')) {
 
         public function mcbSubmit_Form_Data() {
 
-            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ): '', 'wp_rest' ) ) {
+            if (!wp_verify_nonce(isset($_GET['nonce'])?sanitize_text_field(wp_unslash($_GET['nonce'])): '', 'mcbFormData' ) ) {
                 wp_die();
             }
 
@@ -192,7 +192,7 @@ if(!class_exists('MailChimpApi')) {
 
         public function mcbSubmit_Form_AudienceId()
         {
-            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '', 'wp_rest' ) ) {
+            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '', 'mcbAudienceIDList' ) ) {
                 wp_die();
             }
 
