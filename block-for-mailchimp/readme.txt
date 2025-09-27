@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5+
 Tested up to: 6.8.2
-Stable tag: 1.1.12
+Stable tag: 1.1.13
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -94,10 +94,13 @@ See the features that make Mailchimp-Block for Mailchimp the **Greatest WordPres
 ✔ E-Commerce Sites
 
 = How to use =
-- Go to the Plugins Menu in WordPress
-- Search for “Mailchimp block”
-- Click “Install”
-- Activate the Mailchimp block Plugin on your Plugins Menu
+- Install the plugin.
+- Go the the page/posts where you want to show the mailchimp form.
+- Search block for mailchimp by clicking on the + button on the Gutenberg block editor.
+- Select the Block For MailChimp
+- Set your form, then customize the view from the right sidebar.
+- Publish the page.
+- Enjoy!
 
 * For installation help click on Installation Tab
 
@@ -193,6 +196,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 == Changelog ==
 
+= 1.1.13 - 27 Sept, 2025 =
+* Wordfence issues fixed;
+
 = 1.1.12 - 22 Sept, 2025 =
 * Wordfence issues fixed and mordern dashboard added;
 
@@ -279,6 +285,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 
 == Upgrade Notice ==
+
+= 1.1.13 - 27 Sept, 2025 =
+* Wordfence issues fixed;
 
 = 1.1.12 - 22 Sept, 2025 =
 * Wordfence issues fixed and mordern dashboard added;

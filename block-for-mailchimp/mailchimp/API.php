@@ -8,16 +8,13 @@ if(!class_exists('MailChimpApi')) {
         public function __construct()
         {
             add_action('wp_ajax_mcbAudienceList', [$this, 'mcbAudienceList']);
-            add_action('wp_ajax_nopriv_mcbAudienceList', [$this, 'mcbAudienceList']);
 
             add_action('wp_ajax_mcb_get_access_token', [$this, 'mcb_get_access_token']);
-            add_action('wp_ajax_nopriv_mcb_get_access_token', [$this, 'mcb_get_access_token']);
-
+             
             add_action('wp_ajax_mcbSubmit_Form_Data', [$this, 'mcbSubmit_Form_Data']);
             add_action('wp_ajax_nopriv_mcbSubmit_Form_Data', [$this, 'mcbSubmit_Form_Data']);
 
             add_action('wp_ajax_mcbSubmit_Form_AudienceId', [$this, 'mcbSubmit_Form_AudienceId']);
-            add_action('wp_ajax_nopriv_mcbSubmit_Form_AudienceId', [$this, 'mcbSubmit_Form_AudienceId']);
         }
 
         public function mcbAudienceList() {
@@ -43,7 +40,7 @@ if(!class_exists('MailChimpApi')) {
             $accessToken = sanitize_text_field(wp_unslash($_GET['accessToken']));
         
             // Make the first API request to get metadata
-            $response = wp_remote_get("https://login.mailchimp.com/oauth2/metadata", [
+            $response = wp_safe_remote_get("https://login.mailchimp.com/oauth2/metadata", [
                 "method" => "GET",
                 "headers" => [
                     "Authorization" => "Bearer " . $accessToken,
@@ -63,7 +60,7 @@ if(!class_exists('MailChimpApi')) {
                 $url = "$endpoint_url/3.0/lists";
         
                 // Make the second API request to fetch audience lists
-                $response = wp_remote_get($url, [
+                $response = wp_safe_remote_post($url, [
                     "method" => "GET",
                     "headers" => [
                         "Authorization" => "Bearer " . $accessToken, 
@@ -88,9 +85,7 @@ if(!class_exists('MailChimpApi')) {
             wp_die();
         }
         
-
         public function mcb_get_access_token () {
-            
 
             if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ): '', 'mcbAccessTokenGet' ) ) {
                 wp_die();

@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Block For MailChimp
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.12
+ * Version: 1.1.13
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -19,7 +19,7 @@ if ( function_exists( 'mcb_fs' ) ) {
     mcb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.12' ) );
+    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.13' ) );
     define( 'MCB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'MCB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'MCB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
@@ -46,7 +46,7 @@ if ( function_exists( 'mcb_fs' ) ) {
                     'premium_suffix'      => 'Pro',
                     'has_premium_version' => true,
                     'has_addons'          => false,
-                    'has_paid_plans'      => true, 
+                    'has_paid_plans'      => true,
                     'trial'               => array(
                         'days'               => 7,
                         'is_require_payment' => false,
