@@ -60,7 +60,7 @@ if(!class_exists('MailChimpApi')) {
                 $url = "$endpoint_url/3.0/lists";
         
                 // Make the second API request to fetch audience lists
-                $response = wp_safe_remote_post($url, [
+                $response = wp_remote_get("$url?count=1000&offset=0", [
                     "method" => "GET",
                     "headers" => [
                         "Authorization" => "Bearer " . $accessToken, 
@@ -76,6 +76,8 @@ if(!class_exists('MailChimpApi')) {
         
                 // Include the endpoint URL in the response
                 $data['endpoint_url'] = esc_url($url);
+
+                
         
                 wp_send_json_success($data);
             } else {
@@ -155,7 +157,7 @@ if(!class_exists('MailChimpApi')) {
                 wp_die();
             }
         
-            $response = wp_remote_post($url, [
+            $response = wp_safe_remote_post($url, [
                 "method" => "POST",
                 "headers" => $headers,
                 "body" => wp_json_encode([

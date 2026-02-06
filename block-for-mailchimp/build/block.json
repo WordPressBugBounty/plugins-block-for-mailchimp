@@ -59,7 +59,7 @@
       "type": "object",
       "default": {
         "img": {
-          "url": "https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg"
+          "url": "https://b-slider.bplugins.com/wp-content/uploads/2025/11/mailchip-demo-image-scaled.jpg"
         },
         "size": 120
       }
@@ -69,7 +69,7 @@
       "default": {
         "type": "image",
         "image": {
-          "url": "https://i.ibb.co.com/PCv97J2/photo-1526170375885-4d8ecf77b99f.jpg"
+          "url": "https://b-slider.bplugins.com/wp-content/uploads/2025/11/mailchip-demo-image-scaled.jpg"
         }
       }
     },

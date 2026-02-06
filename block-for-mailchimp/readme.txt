@@ -1,108 +1,125 @@
-=== Block For Mailchimp – Easy Mailchimp Form Integration ===
+=== Block for Mailchimp – Add Email Subscription Forms and Collect Leads ===
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5+
-Tested up to: 6.8.2
-Stable tag: 1.1.13
+Tested up to: 6.9 
+Stable tag: 1.1.14 
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Create a fully customizable Mailchimp subscribe form, and connect your Mailchimp with your WordPress. 
+Add a custom email newsletter or subscription form to your WordPress site and connect it with Mailchimp to quickly grow your audience.
 
 == Description ==
 
-Create a fully customizable Mailchimp subscribe form and connect your Mailchimp with your WordPress.
+[Mailchimp Block](https://bplugins.com/products/mailchimp-block/) helps grow your email list and manage subscribers directly inside WordPress. Once connected, you can create subscription forms that fit your website’s design, choose where they appear, and manage subscribers from your Mailchimp dashboard.
 
+[Mailchimp Block](https://bplugins.com/products/mailchimp-block/) | [Documentation](https://bplugins.com/docs/mailchimp-block/) | [Pricing](https://bplugins.com/products/mailchimp-block/pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/mailchimp-block/#demos)
 
-Your WordPress website can easily incorporate Mailchimp's powerful email marketing features with the Mailchimp Block plugin. Automate email campaigns, sync user data and easily create custom opt-in forms Engage your audience and manage effective email marketing effortlessly.
+https://www.youtube.com/watch?v=MhrwNpjoabY
 
-Email storage makes it easy to communicate with your users. Many themes are available for you to add and modify as you like. To add visual appeal to your email templates, you can include various images and graphics. You can easily create a variety of messages, including newsletters, product promotions and event information, to diversify your communication strategy.
+The plugin includes a dedicated Gutenberg block that lets you visually build and style your forms. You can display a form inline on a page, open it in a popup, or keep it floating at the top or bottom of the screen. Every form is responsive and adjusts automatically to mobile, tablet, and desktop screens.
 
+All collected emails are safely stored in your Mailchimp audience. You can then use Mailchimp’s automation features to send newsletters, product updates, or event invitations. Whether you run a business, publish a blog, or manage a community, this plugin helps you stay connected with your audience.
 
-**[Demos](https://bplugins.com/products/mailchimp-block/#demos) || [Get Pro Version](https://bplugins.com/products/mailchimp-block/#pricing)**
+=== Key Features – Free Version ===
 
-## Here are the best MailChimp Blocks for WordPress ★★★★★ ##
+- **Easy Integration**: Connect your Mailchimp account and select your audience list directly from the WordPress dashboard.
 
-Mailchimp-block plugin has a variety of themes. You can easily design your website using themes. There are four different layouts: normal, modal, auto-popup, floating-top, and floating-bottom.
+- **Dedicated Gutenberg Block**: Add the “Mailchimp Subscribe Form” block anywhere without using shortcodes.
 
-MileChimp-Block includes short code support. Themes can be embedded anywhere. There are many patterns that can be imported with a single click. Themes are transformed into patterns.
+- **Multiple Layouts**: Choose from four layout styles – inline, modal popup, floating top bar, and floating bottom bar – to match your page design.
 
-## Who is the Mailchimp block designed for? ##
- 
-* **Marketers and Influencers** 
-* **Online Course Providers**
-* **Non-Profit Organizations**
-* **Event Planners and Promoters**
-* **Real Estate Agents and Brokers**
-* **Subscription Box Services**
-* **Travel Agencies and Tour Operators**
-* **Restaurants and Food Services**
-* **Health and Wellness Coaches**
+- **Fully Responsive**: Every form looks great on desktop, tablet, and mobile devices.
 
-Mailchimp Block is a simple way to collect user feedback via email. Milechimp Block allows users to easily express their opinions, and organizations can act on their feedback. This block allows users to create inline forms, which is extremely convenient.
+- **Customizable Fields**: Show or hide fields such as first name, last name, and email. Adjust labels and placeholder text easily.
 
+- **Button Styling**: Change button text, color, padding, and border radius to match your website’s color palette.
 
-### Mailchimp-Block Revolutionary Features ###
+- **Typography Control**: Adjust fonts and text sizes for form labels, inputs, and messages.
 
-See the features that make Mailchimp-Block for Mailchimp the **Greatest WordPress MailChimp-Block**.
+- **Success & Error Messages**: Create custom success and error messages with separate color and font options.
 
-* Responsive design. Your MailChimp forms will never look out of place, no matter which device your visitors are using.
-* The label, description, first name, and last name have a show/hide option.
-* Emails are stored in the MailChimp dashboard. Connecting MailChimp is very easy.
-* There are four forms available that you can use. You have the flexibility to customize the form layout, including changing the color, setting padding, and adjusting the border radius.
-* The button text can be easily changed to your desired text. You also have the option to customize the button's color, padding, and font typography to match your design preferences.
-* Certainly! With the available options, you can set the color and typography separately for the success message and error message. This allows you to customize the appearance of each message type according to your preferences.
+- **Unlimited Forms**: Use the block multiple times across posts, pages, or templates.
 
-= Mailchimp-Block Revolutionary Pro Features =
+- **Theme Compatibility**: Works smoothly with all well-coded WordPress themes.
 
-- **Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom**
-- **Ten distinct themes: Default, Theme 1, Theme 2, Theme 3, Theme 4, Theme 5, Theme 6, Theme 7, Theme 8, and Theme 9**
-- **Customizable margins for labels, descriptions, and buttons**
-- **Added shortcode support for easy embedding**
-- **Multiple pattern configurations for a tailored look**
-- **Configurable auto-popup layout duration**
-- **Supports logo uploads for seamless branding**
+=== Mailchimp Block Pro – Unlock Advanced Features ===
 
+Upgrade to the [Pro version](https://bplugins.com/products/mailchimp-block/pricing) to get advanced design options and extra control over your form’s layout and behavior.
 
-### Why is Mailchimp-Block for Mailchimp so revolutionary? ###
+= Pro Features Include: =
 
-* **Configuration** — Authorize your Mailchimp account and show your audience list.
+- **Five Layout Options**: Includes all free layouts plus an auto-popup form that appears after a set delay.
 
-* **Audience** — Select your audience.
+- **Ten Ready-Made Themes**: Apply a pre-built theme or customize one to fit your site’s style.
 
-* **Layout**— There are five different layouts: normal, modal, auto-popup, floating-top, and floating-bottom.
+- **Advanced Design Controls**: Adjust margins, padding, borders, and spacing for a tailored look.
 
-* **Theme**— There are eleven different types of themes: default, theme 1, theme 2, theme 3, theme 4, theme 5, theme 6, theme 7, theme 8, theme 9, and theme 10.
+- **Shortcode Support**: Embed your Mailchimp form anywhere — in widgets, templates, or non-block areas.
 
-* **Responsive Design** — The website runs smoothly on mobile and tablet devices, improving the user experience.
+- **Pattern Library**: Import and edit form patterns with one click.
 
-* **Customization** - The website design and features can be tailored to your specific needs.
+- **Logo Upload**: Add your brand logo to the form for a consistent visual identity.
 
-#### Mailchimp-Block is perfect for: ####
-✔ Business Websites
-✔ Course Creators
-✔ Coaches / Trainers
-✔ eCommerce Store Owners
-✔ Businesses
-✔ Local Businesses
-✔ Startups
-✔ Personal Brands
-✔ Real Estate Agents
-✔ Artists & Photographers
-✔ E-Commerce Sites
+- **Popup Timing Settings**: Define when and how your popup form appears to visitors.
 
-= How to use =
-- Install the plugin.
-- Go the the page/posts where you want to show the mailchimp form.
-- Search block for mailchimp by clicking on the + button on the Gutenberg block editor.
-- Select the Block For MailChimp
-- Set your form, then customize the view from the right sidebar.
-- Publish the page.
-- Enjoy!
+- **Regular Updates & Priority Support**: Receive ongoing improvements and fast customer support.
 
-* For installation help click on Installation Tab
+Try the [Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/pricing) – Unlock all premium features and design options.
+
+=== How to Use Mailchimp Block – Step-by-Step Guide ===
+
+Getting started with Mailchimp Block is quick and simple.
+
+1. **Install** and **activate** the plugin.
+
+2. Go to the page or post where you want to display your Mailchimp form.
+
+3. Click the **+** icon in the Gutenberg editor and search for **Mailchimp**.
+
+4. Add the **Mailchimp Subscribe Form** block.
+
+5. Connect your Mailchimp account and select your audience list.
+
+6. Choose a layout (inline, popup, floating, etc.) and customize the design.
+
+7. Publish your page and start collecting subscribers.
+
+That’s it — your form is live and ready to grow your list.
+
+=== Who Can Benefit from Using Mailchimp Block ===
+
+Mailchimp Block is built for anyone who wants to grow an email list and manage subscribers directly from WordPress. Whether you’re promoting products, events, or content, it helps you collect leads effortlessly.
+
+It’s especially useful for:
+
+- **Marketers and Influencers** running newsletters and campaigns
+
+- **Online Course Creators** staying in touch with students
+
+- **Non-profits and Community Groups** gathering email lists for updates or donations
+
+- **Event Planners and Promoters** managing registrations and attendees
+
+- **Real Estate Agents and Brokers** sharing listings and news
+
+- **E-commerce Stores and Subscription Services** collecting customer leads
+
+- **Travel Agencies and Tour Operators** promoting trips and offers
+
+- **Restaurants and Food Businesses** advertising menus and specials
+
+- **Health and Wellness Coaches** building client communities
+
+- **Local Businesses, Startups, and Personal Brands** expanding their online reach
+
+- **Artists, Photographers, and Creators** sharing portfolio updates and content
+
+Every form is fully responsive and easy to customize. You can choose from multiple layouts, apply themes, and connect to your Mailchimp audience in just a few clicks.
+
+[Live Demo](https://bplugins.com/products/mailchimp-block/#demos) | [Get Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/pricing)
 
 = Feedback =
 - Do you like that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
@@ -196,6 +213,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 == Changelog ==
 
+= 1.1.14 - 10 Nov, 2025 =
+* sdk update and readme update;
+
 = 1.1.13 - 27 Sept, 2025 =
 * Wordfence issues fixed;
 
@@ -285,6 +305,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 
 == Upgrade Notice ==
+
+= 1.1.14 - 10 Nov, 2025 =
+* sdk update and readme update;
 
 = 1.1.13 - 27 Sept, 2025 =
 * Wordfence issues fixed;

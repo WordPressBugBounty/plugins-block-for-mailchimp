@@ -3,13 +3,13 @@
 /**
  * Plugin Name: Block For MailChimp
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.13
+ * Version: 1.1.14
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: block-for-mailchimp
- * @fs_free_only, bsdk_config.json, /freemius-lite, /includes/admin-menu-free.php
+ * @fs_free_only, bsdk_config.json, /freemius-lite , /includes/admin-menu-free.php
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
@@ -19,13 +19,13 @@ if ( function_exists( 'mcb_fs' ) ) {
     mcb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.13' ) );
+    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.14' ) );
     define( 'MCB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'MCB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'MCB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
     define( 'MCB_IS_FREE', 'block-for-mailchimp/index.php' === plugin_basename( __FILE__ ) );
     define( 'MCB_IS_PRO', file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) );
-    if ( !function_exists( 'br_fs' ) ) {
+    if ( !function_exists( 'mcb_fs' ) ) {
         // Create a helper function for easy SDK access.
         function mcb_fs() {
             global $mcb_fs;
@@ -52,9 +52,8 @@ if ( function_exists( 'mcb_fs' ) ) {
                         'is_require_payment' => false,
                     ),
                     'menu'                => ( MCB_IS_PRO ? array(
-                        'slug'       => 'block-for-mailchimp',
-                        'first-path' => 'admin.php?page=block-for-mailchimp#/pricing',
-                        'support'    => false,
+                        'slug'    => 'block-for-mailchimp',
+                        'support' => false,
                     ) : array(
                         'slug'       => 'block-for-mailchimp',
                         'first-path' => 'tools.php?page=block-for-mailchimp#/pricing',
@@ -88,7 +87,6 @@ if ( function_exists( 'mcb_fs' ) ) {
             add_action( 'init', [$this, 'onInit'] );
             add_action( 'admin_init', [$this, 'registerMCBSetting'] );
             add_action( 'rest_api_init', [$this, 'registerMCBSetting'] );
-            add_action( 'admin_init', [$this, 'add_option_in_general_settings'], 10 );
             if ( !MCB_IS_PRO ) {
                 add_filter(
                     'plugin_action_links',
@@ -125,9 +123,7 @@ if ( function_exists( 'mcb_fs' ) ) {
                 require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-free.php';
             }
             if ( MCB_IS_PRO && mcbIsPremium() ) {
-                if ( !get_option( 'mcb_block_option' ) ) {
-                    require_once plugin_dir_path( __FILE__ ) . '/shortCode.php';
-                }
+                require_once plugin_dir_path( __FILE__ ) . '/shortCode.php';
             }
         }
 
@@ -196,30 +192,6 @@ if ( function_exists( 'mcb_fs' ) ) {
                     true
                 );
             }
-        }
-
-        function add_option_in_general_settings() {
-            register_setting( 'general', 'mcb_block_option', 'sanitize_text_field' );
-            add_settings_field(
-                'mcb_block_option_field',
-                'Hide MailChimp Block From Admin Menu',
-                array($this, "mcb_block_option_callback"),
-                'general'
-            );
-        }
-
-        function mcb_block_option_callback() {
-            // Get the current value from the database, default is 'off'
-            $value = get_option( 'mcb_block_option', 'false' );
-            ?>
-            <label class="switch">
-              <input type="checkbox" id="mcb_block_option" name="mcb_block_option" value="true" <?php 
-            checked( $value, 'true' );
-            ?>>
-              <span class="slider round"></span>
-            </label>
-            <p class="description">Turn this setting on or off.</p>
-            <?php 
         }
 
         public function onInit() {
