@@ -3,8 +3,8 @@ Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5+
-Tested up to: 6.9
-Stable tag: 1.1.14 
+Tested up to: 6.8.3
+Stable tag: 1.1.15
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,7 +15,7 @@ Add a custom email newsletter or subscription form to your WordPress site and co
 
 [Mailchimp Block](https://bplugins.com/products/mailchimp-block/) helps grow your email list and manage subscribers directly inside WordPress. Once connected, you can create subscription forms that fit your website’s design, choose where they appear, and manage subscribers from your Mailchimp dashboard.
 
-[Mailchimp Block](https://bplugins.com/products/mailchimp-block/) | [Documentation](https://bplugins.com/docs/mailchimp-block/) | [Pricing](https://bplugins.com/products/mailchimp-block/pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/mailchimp-block/#demos)
+[Mailchimp Block](https://bplugins.com/products/mailchimp-block/) | [Documentation](https://bplugins.com/docs/mailchimp-block/) | [Pricing](https://bplugins.com/products/mailchimp-block/#pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/mailchimp-block/#demos)
 
 https://www.youtube.com/watch?v=MhrwNpjoabY
 
@@ -47,7 +47,7 @@ All collected emails are safely stored in your Mailchimp audience. You can then 
 
 === Mailchimp Block Pro – Unlock Advanced Features ===
 
-Upgrade to the [Pro version](https://bplugins.com/products/mailchimp-block/pricing) to get advanced design options and extra control over your form’s layout and behavior.
+Upgrade to the [Pro version](https://bplugins.com/products/mailchimp-block/#pricing) to get advanced design options and extra control over your form’s layout and behavior.
 
 = Pro Features Include: =
 
@@ -67,7 +67,7 @@ Upgrade to the [Pro version](https://bplugins.com/products/mailchimp-block/prici
 
 - **Regular Updates & Priority Support**: Receive ongoing improvements and fast customer support.
 
-Try the [Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/pricing) – Unlock all premium features and design options.
+Try the [Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/#pricing) – Unlock all premium features and design options.
 
 === How to Use Mailchimp Block – Step-by-Step Guide ===
 
@@ -119,7 +119,7 @@ It’s especially useful for:
 
 Every form is fully responsive and easy to customize. You can choose from multiple layouts, apply themes, and connect to your Mailchimp audience in just a few clicks.
 
-[Live Demo](https://bplugins.com/products/mailchimp-block/#demos) | [Get Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/pricing)
+[Live Demo](https://bplugins.com/products/mailchimp-block/#demos) | [Get Mailchimp Block PRO](https://bplugins.com/products/mailchimp-block/#pricing)
 
 = Feedback =
 - Do you like that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
@@ -213,6 +213,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 == Changelog ==
 
+= 1.1.15 - 7 April, 2026 =
+* Added a new modern dashboard;
+
 = 1.1.14 - 10 Nov, 2025 =
 * sdk update and readme update;
 
@@ -305,6 +308,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 
 == Upgrade Notice ==
+
+= 1.1.15 - 7 April, 2026 =
+* Added a new modern dashboard;
 
 = 1.1.14 - 10 Nov, 2025 =
 * sdk update and readme update;

@@ -5,7 +5,7 @@
   "title": "Mailchimp-block",
   "description": "Embed MailChimp email subscription form",
   "category": "widgets",
-  "version": "1.1.11",
+  "version": "1.1.14",
   "keywords": [
     "newsletter",
     "mailchimp",
@@ -13,6 +13,10 @@
   ],
   "textdomain": "block-for-mailchimp",
   "attributes": {
+    "preview": {
+      "type": "boolean",
+      "default": false
+    },
     "align": {
       "type": "string",
       "default": ""

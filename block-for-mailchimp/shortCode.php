@@ -2,16 +2,14 @@
 if (!defined('ABSPATH')) {exit;}
 if(!class_exists("mcbCustomPost")) {
 	class mcbCustomPost{
-		public $post_type = 'mailchimp-block';
+		public $post_type = 'block-for-mailchimp';
 		
 		public function __construct(){
-			 
-				add_action( 'init', [$this, 'onInit'], 20 );
-				add_shortcode( 'mcb-block', [$this, 'onAddShortcode'], 20 );
-				add_filter( 'manage_mailchimp-block_posts_columns', [$this, 'manageMCBPostsColumns'], 10 );
-				add_action( 'manage_mailchimp-block_posts_custom_column', [$this, 'manageMCBPostsCustomColumns'], 10, 2 );
-				add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
-				
+			add_action( 'init', [$this, 'onInit'], 20 );
+			add_shortcode( 'mcb-block', [$this, 'onAddShortcode'], 20 );
+			add_filter( 'manage_block-for-mailchimp_posts_columns', [$this, 'manageMCBPostsColumns'], 10 );
+			add_action( 'manage_block-for-mailchimp_posts_custom_column', [$this, 'manageMCBPostsCustomColumns'], 10, 2 );
+			add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );		
 		}
 
 		function onInit(){
@@ -19,10 +17,12 @@ if(!class_exists("mcbCustomPost")) {
 
 			register_post_type( $this->post_type, [
 				'labels'				=> [
-					'name'			=> __( 'Mailchimp Block', 'block-for-mailchimp' ),
-					'singular_name'	=> __( 'Mailchimp Block', 'block-for-mailchimp' ),
+					'name'			=> __( 'Mailchimp', 'block-for-mailchimp' ),
+					'singular_name'	=> __( 'Mailchimp', 'block-for-mailchimp' ),
+					'menu_name'     => __( 'Mailchimp', 'block-for-mailchimp' ),
+					'all_items'     => __( 'All Mailchimp Blocks', 'block-for-mailchimp' ),
 					'add_new'		=> __( 'Add New', 'block-for-mailchimp' ),
-					'add_new_item'	=> __( 'Add New', 'block-for-mailchimp' ),
+					'add_new_item'	=> __( '&#8627; Add New', 'block-for-mailchimp' ),
 					'edit_item'		=> __( 'Edit', 'block-for-mailchimp' ),
 					'new_item'		=> __( 'New', 'block-for-mailchimp' ),
 					'view_item'		=> __( 'View', 'block-for-mailchimp' ),
@@ -39,11 +39,10 @@ if(!class_exists("mcbCustomPost")) {
 				'has_archive'			=> false,
 				'hierarchical'			=> false,
 				'capability_type'		=> 'page',
-				'rewrite'				=> [ 'slug' => 'mailchimp-block' ],
+				'rewrite'				=> [ 'slug' => 'block-for-mailchimp' ],
 				'supports'				=> [ 'title', 'editor' ],
 				'template'				=> [ ['mcb/mailchimp'] ],
 				'template_lock'			=> 'all',
-				'show_in_menu'          => false
 			]); // Register Post Type
 		}
 

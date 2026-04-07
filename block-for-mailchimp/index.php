@@ -3,13 +3,13 @@
 /**
  * Plugin Name: Block For MailChimp
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.14
+ * Version: 1.1.15
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: block-for-mailchimp
- * @fs_free_only, bsdk_config.json, /freemius-lite , /includes/admin-menu-free.php
+ * @fs_free_only, bsdk_config.json, /freemius-lite
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( function_exists( 'mcb_fs' ) ) {
     mcb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.14' ) );
+    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.15' ) );
     define( 'MCB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'MCB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'MCB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
@@ -33,6 +33,7 @@ if ( function_exists( 'mcb_fs' ) ) {
                 // Include Freemius SDK.
                 if ( MCB_IS_PRO ) {
                     require_once dirname( __FILE__ ) . '/freemius/start.php';
+                    require_once dirname( __FILE__ ) . '/includes/LicenseActivation.php';
                 } else {
                     require_once dirname( __FILE__ ) . '/freemius-lite/start.php';
                 }
@@ -42,26 +43,21 @@ if ( function_exists( 'mcb_fs' ) ) {
                     'premium_slug'        => 'block-for-mailchimp-pro',
                     'type'                => 'plugin',
                     'public_key'          => 'pk_be17ce2b79a810296764efd7ca327',
-                    'is_premium'          => true,
+                    'is_premium'          => false,
                     'premium_suffix'      => 'Pro',
                     'has_premium_version' => true,
                     'has_addons'          => false,
                     'has_paid_plans'      => true,
+                    'is_org_compliant'    => true,
                     'trial'               => array(
                         'days'               => 7,
-                        'is_require_payment' => false,
+                        'is_require_payment' => true,
                     ),
-                    'menu'                => ( MCB_IS_PRO ? array(
-                        'slug'    => 'block-for-mailchimp',
-                        'support' => false,
-                    ) : array(
-                        'slug'       => 'block-for-mailchimp',
-                        'first-path' => 'tools.php?page=block-for-mailchimp#/pricing',
+                    'menu'                => array(
+                        'slug'       => 'edit.php?post_type=block-for-mailchimp',
+                        'first-path' => 'edit.php?post_type=block-for-mailchimp&page=mcb#/pricing',
                         'support'    => false,
-                        'parent'     => array(
-                            'slug' => 'tools.php',
-                        ),
-                    ) ),
+                    ),
                 );
                 $mcb_fs = ( MCB_IS_PRO ? fs_dynamic_init( $mcbConfig ) : fs_lite_dynamic_init( $mcbConfig ) );
             }
@@ -117,14 +113,8 @@ if ( function_exists( 'mcb_fs' ) ) {
 
         public function load_classes() {
             require_once plugin_dir_path( __FILE__ ) . '/mailchimp/API.php';
-            if ( MCB_IS_PRO ) {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-pro.php';
-            } else {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-free.php';
-            }
-            if ( MCB_IS_PRO && mcbIsPremium() ) {
-                require_once plugin_dir_path( __FILE__ ) . '/shortCode.php';
-            }
+            require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu.php';
+            require_once plugin_dir_path( __FILE__ ) . '/shortCode.php';
         }
 
         // Extending row meta
