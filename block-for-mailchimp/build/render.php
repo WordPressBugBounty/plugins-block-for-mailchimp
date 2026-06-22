@@ -1,7 +1,6 @@
 <?php
     if ( ! defined( 'ABSPATH' ) ) exit;
-    extract($attributes);
-    
+    // Note: $attributes is available directly from the block render callback scope.
     $id = wp_unique_id( 'mcbMailChimp-' );
     ?>
 

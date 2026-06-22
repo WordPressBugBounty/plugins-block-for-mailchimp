@@ -1,102 +1,71 @@
 <?php
-
 /**
- * Plugin Name: Block For MailChimp
+ * Plugin Name: Block for Mailchimp – Add Email Subscription Forms and Collect Leads
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.15
+ * Version: 1.1.16
  * Author: bPlugins
  * Author URI: http://bplugins.com
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: block-for-mailchimp
- * @fs_free_only, bsdk_config.json, /freemius-lite
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
-if ( function_exists( 'mcb_fs' ) ) {
-    mcb_fs()->set_basename( false, __FILE__ );
+if ( function_exists( 'bpbfm_fs' ) ) {
+    bpbfm_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'MCB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.15' ) );
-    define( 'MCB_DIR', plugin_dir_url( __FILE__ ) );
-    define( 'MCB_DIR_PATH', plugin_dir_path( __FILE__ ) );
-    define( 'MCB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
-    define( 'MCB_IS_FREE', 'block-for-mailchimp/index.php' === plugin_basename( __FILE__ ) );
-    define( 'MCB_IS_PRO', file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) );
-    if ( !function_exists( 'mcb_fs' ) ) {
+    define( 'BPBFM_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.16' ) );
+    define( 'BPBFM_DIR', plugin_dir_url( __FILE__ ) );
+    define( 'BPBFM_DIR_PATH', plugin_dir_path( __FILE__ ) );
+    define( 'BPBFM_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
+    
+    if ( !function_exists( 'bpbfm_fs' ) ) {
         // Create a helper function for easy SDK access.
-        function mcb_fs() {
-            global $mcb_fs;
-            if ( !isset( $mcb_fs ) ) {
+        function bpbfm_fs() {
+            global $bpbfm_fs;
+            if ( !isset( $bpbfm_fs ) ) {
                 // Include Freemius SDK.
-                if ( MCB_IS_PRO ) {
-                    require_once dirname( __FILE__ ) . '/freemius/start.php';
-                    require_once dirname( __FILE__ ) . '/includes/LicenseActivation.php';
-                } else {
-                    require_once dirname( __FILE__ ) . '/freemius-lite/start.php';
-                }
+                 
+                    require_once dirname( __FILE__ ) . '/vendor/freemius-lite/start.php';
+                
                 $mcbConfig = array(
                     'id'                  => '16870',
                     'slug'                => 'block-for-mailchimp',
-                    'premium_slug'        => 'block-for-mailchimp-pro',
                     'type'                => 'plugin',
                     'public_key'          => 'pk_be17ce2b79a810296764efd7ca327',
                     'is_premium'          => false,
-                    'premium_suffix'      => 'Pro',
-                    'has_premium_version' => true,
-                    'has_addons'          => false,
-                    'has_paid_plans'      => true,
-                    'is_org_compliant'    => true,
-                    'trial'               => array(
-                        'days'               => 7,
-                        'is_require_payment' => true,
-                    ),
                     'menu'                => array(
-                        'slug'       => 'edit.php?post_type=block-for-mailchimp',
-                        'first-path' => 'edit.php?post_type=block-for-mailchimp&page=mcb#/pricing',
-                        'support'    => false,
+                        'slug'           => 'edit.php?post_type=block-for-mailchimp',
+                        'first-path'     => 'edit.php?post_type=block-for-mailchimp&page=mcb#/pricing',
+                        'support'        => false,
                     ),
                 );
-                $mcb_fs = ( MCB_IS_PRO ? fs_dynamic_init( $mcbConfig ) : fs_lite_dynamic_init( $mcbConfig ) );
+                $bpbfm_fs =  fs_lite_dynamic_init( $mcbConfig );
             }
-            return $mcb_fs;
+            return $bpbfm_fs;
         }
 
         // // Init Freemius.
-        mcb_fs();
+        bpbfm_fs();
         // Signal that SDK was initiated.
-        do_action( 'mcb_fs_loaded' );
+        do_action( 'bpbfm_fs_loaded' );
     }
-    function mcbIsPremium() {
-        return ( MCB_IS_PRO ? mcb_fs()->can_use_premium_code() : false );
-    }
+     
 
     // Mailchimp block
     class MCBMailChimp {
         public function __construct() {
             $this->load_classes();
-            add_action( 'enqueue_block_editor_assets', [$this, 'enqueueBlockEditorAssets'] );
             add_action( 'enqueue_block_assets', [$this, 'mailChimpBlockAssets'] );
             add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
             add_action( 'init', [$this, 'onInit'] );
             add_action( 'admin_init', [$this, 'registerMCBSetting'] );
             add_action( 'rest_api_init', [$this, 'registerMCBSetting'] );
-            if ( !MCB_IS_PRO ) {
-                add_filter(
-                    'plugin_action_links',
-                    [$this, 'plugin_action_links'],
-                    10,
-                    2
-                );
-            }
-            add_filter(
-                'plugin_row_meta',
-                array($this, 'insert_plugin_row_meta'),
-                10,
-                2
-            );
+            add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2);
+            add_filter( 'plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
         }
 
         public function plugin_action_links( $links, $file ) {
@@ -139,6 +108,9 @@ if ( function_exists( 'mcb_fs' ) ) {
                 'type'              => 'string',
                 'default'           => '',
                 'sanitize_callback' => 'sanitize_text_field',
+                'auth_callback'     => function() {
+                    return current_user_can( 'manage_options' );
+                },
             ) );
         }
 
@@ -159,40 +131,20 @@ if ( function_exists( 'mcb_fs' ) ) {
                 'ajaxUrl' => admin_url( 'admin-ajax.php' ),
                 'nonce'   => wp_create_nonce( 'mcbAllAudienceList' ),
             ] );
-            wp_localize_script( 'mcb-mailchimp-editor-script', 'mcbInfo', [
-                'patternsImagePath' => MCB_DIR . 'assets/img/patterns/',
-            ] );
         }
 
         // Short code style
         public function adminEnqueueScripts( $hook ) {
             global $post_type;
             if ( $post_type == "mailchimp-block" ) {
-                wp_enqueue_style(
-                    'mcbAdmin',
-                    MCB_ASSETS_DIR . 'css/admin.css',
-                    [],
-                    MCB_PLUGIN_VERSION
-                );
-                wp_enqueue_script(
-                    'mcbAdmin',
-                    MCB_ASSETS_DIR . 'js/admin.js',
-                    ['wp-i18n'],
-                    MCB_PLUGIN_VERSION,
-                    true
-                );
+                wp_enqueue_style( 'mcbAdmin', BPBFM_ASSETS_DIR . 'css/admin.css', [], BPBFM_PLUGIN_VERSION);
+                wp_enqueue_script( 'mcbAdmin', BPBFM_ASSETS_DIR . 'js/admin.js', ['wp-i18n'], BPBFM_PLUGIN_VERSION,true);
             }
         }
 
         public function onInit() {
             register_block_type( __DIR__ . '/build' );
         }
-
-        public function enqueueBlockEditorAssets() {
-            wp_add_inline_script( 'mcb-mailchimp-editor-script', "const mcbpipecheck=" . wp_json_encode( mcbIsPremium() ) . ';', 'before' );
-        }
-
     }
-
     new MCBMailChimp();
 }

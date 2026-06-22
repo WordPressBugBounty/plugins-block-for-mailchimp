@@ -4,10 +4,10 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.1.15
-Requires PHP: 7.1
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 1.1.16
+Requires PHP: 7.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Add a custom email newsletter or subscription form to your WordPress site and connect it with Mailchimp to quickly grow your audience.
 
@@ -213,6 +213,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 == Changelog ==
 
+= 1.1.16 - 22 June, 2026 =
+* New placement layout modal feature added;
+
 = 1.1.15 - 7 April, 2026 =
 * Added a new modern dashboard;
 
@@ -355,12 +358,6 @@ Please report security bugs found in the source code of the MailChimp Block plug
 = 1.1.1 - 5 Nov, 24 =
 * Pro Feature List
 * Four layout options: Normal, Modal, Auto Popup, Floating Top, and Floating Bottom.
-* Ten distinct themes: Default, Theme 1, Theme 2, Theme 3, Theme 4, Theme 5, Theme 6, Theme 7, Theme 8, and Theme 9.
-* Customizable margins for labels, descriptions, and buttons.
-* Added shortcode support for easy embedding.
-* Multiple pattern configurations for a tailored look.
-* Configurable auto-popup layout duration.
-* Supports logo uploads for seamless branding.
 
 = 1.1.0 - 8 July, 24 =
 * OAuth authorization system added.
@@ -400,3 +397,29 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 = 1.0.0 =
 * Initial Release
+
+
+== Source Code ==
+
+You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
+[**Block for Mailchimp on GitHub**](https://github.com/bPlugins/block-for-mailchimp-free) 
+
+= Font Awesome = 
+* **Source:** https://fontawesome.com/
+* **GitHub:** https://github.com/FortAwesome/Font-Awesome
+* **License:** SIL OFL 1.1 (Fonts), MIT (CSS) – https://fontawesome.com/license/free
+* **Purpose:** Provides scalable vector icons used for slider navigation arrows and UI elements.
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+= Freemius Lite SDK =
+
+* **Source:** [https://bplugins.com/](https://bplugins.com/)
+* **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+* **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+* **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).

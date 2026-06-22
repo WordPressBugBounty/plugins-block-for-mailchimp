@@ -1,8 +1,8 @@
 <?php
 if (!defined('ABSPATH')) {exit;}
 
-if(!class_exists('MailChimpApi')) { 
-    class MailChimpApi
+if(!class_exists('BPBFM_Mailchimp_API')) {
+    class BPBFM_Mailchimp_API
     {
 
         public function __construct()
@@ -17,27 +17,38 @@ if(!class_exists('MailChimpApi')) {
             add_action('wp_ajax_mcbSubmit_Form_AudienceId', [$this, 'mcbSubmit_Form_AudienceId']);
         }
 
+        /**
+         * Fetch audience lists via OAuth access token.
+         * S-01: Added capability check.
+         * S-03: Changed from $_GET to $_POST for sensitive data.
+         * S-07: Changed wp_remote_get to wp_safe_remote_get.
+         */
         public function mcbAudienceList() {
-            // Check if the nonce parameter exists
-            if (!isset($_GET['nonce'])) {
-                wp_die(esc_html__('Nonce is missing', 'block-for-mailchimp'), '', ['response' => 400]);
+            // S-01: Capability check
+            if ( ! current_user_can( 'manage_options' ) ) {
+                wp_send_json_error( esc_html__( 'Unauthorized', 'block-for-mailchimp' ), 403 );
+            }
+
+            // Check if the nonce parameter exists (S-03: now from POST)
+            if (!isset($_POST['nonce'])) {
+                wp_send_json_error( esc_html__( 'Nonce is missing', 'block-for-mailchimp' ), 400 );
             }
         
             // Unslash and sanitize the nonce
-            $nonce = sanitize_text_field(wp_unslash($_GET['nonce']));
+            $nonce = sanitize_text_field(wp_unslash($_POST['nonce']));
         
             // Verify the nonce
             if (!wp_verify_nonce($nonce, 'mcbAllAudienceList')) {
-                wp_die(esc_html__('Invalid nonce', 'block-for-mailchimp'), '', ['response' => 403]);
+                wp_send_json_error( esc_html__( 'Security check failed.', 'block-for-mailchimp' ), 403 );
             }
         
-            // Check if the access token parameter exists
-            if (!isset($_GET['accessToken'])) {
-                wp_die(esc_html__('Access token is required', 'block-for-mailchimp'), '', ['response' => 400]);
+            // Check if the access token parameter exists (S-03: now from POST)
+            if (!isset($_POST['accessToken'])) {
+                wp_send_json_error( esc_html__( 'Access token is required', 'block-for-mailchimp' ), 400 );
             }
         
             // Unslash and sanitize the access token
-            $accessToken = sanitize_text_field(wp_unslash($_GET['accessToken']));
+            $accessToken = sanitize_text_field(wp_unslash($_POST['accessToken']));
         
             // Make the first API request to get metadata
             $response = wp_safe_remote_get("https://login.mailchimp.com/oauth2/metadata", [
@@ -48,7 +59,7 @@ if(!class_exists('MailChimpApi')) {
             ]);
         
             if (is_wp_error($response)) {
-                wp_die(esc_html__('Failed to fetch data from Mailchimp', 'block-for-mailchimp'), '', ['response' => 500]);
+                wp_send_json_error( esc_html__( 'Failed to fetch data from Mailchimp', 'block-for-mailchimp' ), 500 );
             }
         
             $body = wp_remote_retrieve_body($response);
@@ -57,10 +68,16 @@ if(!class_exists('MailChimpApi')) {
             // Check if the API endpoint exists in the metadata
             if (isset($metadata['api_endpoint'])) {
                 $endpoint_url = $metadata['api_endpoint'];
+
+                // S-02: Validate that the endpoint matches Mailchimp's domain pattern
+                if ( ! preg_match( '#^https://[a-z0-9]+\.api\.mailchimp\.com$#i', $endpoint_url ) ) {
+                    wp_send_json_error( esc_html__( 'Invalid Mailchimp API endpoint', 'block-for-mailchimp' ), 400 );
+                }
+
                 $url = "$endpoint_url/3.0/lists";
         
-                // Make the second API request to fetch audience lists
-                $response = wp_remote_get("$url?count=1000&offset=0", [
+                // S-07: Use wp_safe_remote_get instead of wp_remote_get
+                $response = wp_safe_remote_get("$url?count=1000&offset=0", [
                     "method" => "GET",
                     "headers" => [
                         "Authorization" => "Bearer " . $accessToken, 
@@ -68,7 +85,7 @@ if(!class_exists('MailChimpApi')) {
                 ]);
         
                 if (is_wp_error($response)) {
-                    wp_die(esc_html__('Failed to fetch audience lists from Mailchimp', 'block-for-mailchimp'), '', ['response' => 500]);
+                    wp_send_json_error( esc_html__( 'Failed to fetch audience lists from Mailchimp', 'block-for-mailchimp' ), 500 );
                 }
         
                 $body = wp_remote_retrieve_body($response);
@@ -77,69 +94,82 @@ if(!class_exists('MailChimpApi')) {
                 // Include the endpoint URL in the response
                 $data['endpoint_url'] = esc_url($url);
 
-                
-        
                 wp_send_json_success($data);
             } else {
-                wp_die(esc_html__('Invalid response from Mailchimp', 'block-for-mailchimp'), '', ['response' => 500]);
+                wp_send_json_error( esc_html__( 'Invalid response from Mailchimp', 'block-for-mailchimp' ), 500 );
             }
-        
-            wp_die();
         }
         
+        /**
+         * Get access token from bPlugins OAuth relay.
+         * S-01: Added capability check.
+         * S-03: Changed from $_GET to $_POST for sensitive data.
+         * S-08: Proper error response on nonce failure.
+         */
         public function mcb_get_access_token () {
-
-            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ): '', 'mcbAccessTokenGet' ) ) {
-                wp_die();
+            // S-01: Capability check
+            if ( ! current_user_can( 'manage_options' ) ) {
+                wp_send_json_error( esc_html__( 'Unauthorized', 'block-for-mailchimp' ), 403 );
             }
-            $state = isset( $_GET['state'] ) ? sanitize_text_field( wp_unslash( $_GET['state'] ) ) : '';
+
+            // S-03: Nonce from POST, S-08: Proper error response
+            if ( ! wp_verify_nonce( isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ): '', 'mcbAccessTokenGet' ) ) {
+                wp_send_json_error( esc_html__( 'Security check failed.', 'block-for-mailchimp' ), 403 );
+            }
+
+            // S-03: State from POST
+            $state = isset( $_POST['state'] ) ? sanitize_text_field( wp_unslash( $_POST['state'] ) ) : '';
 
              try {
-                 $response = wp_remote_get("https://api.bplugins.com/wp-json/mailchimp/v1/get-token/?state=$state");
+                 // S-07: Use wp_safe_remote_get for external requests
+                 $response = wp_safe_remote_get("https://api.bplugins.com/wp-json/mailchimp/v1/get-token/?state=$state");
                  wp_send_json_success($response);
              } catch (\Throwable $th) {
-                //throw $th;
-                wp_send_json_error('something went wrong!');
+                wp_send_json_error( esc_html__( 'Something went wrong!', 'block-for-mailchimp' ) );
              }
-
-
-            // echo wp_remote_retrieve_body($response);
-            // wp_die();
         }
 
+        /**
+         * Handle form submission — subscribe a user to Mailchimp.
+         * S-03: Changed from $_GET to $_POST for sensitive data (email, names).
+         * S-02: Validate endpoint_url against Mailchimp domain pattern.
+         * S-08: Proper error response on nonce failure.
+         */
         public function mcbSubmit_Form_Data() {
-
-            if (!wp_verify_nonce(isset($_GET['nonce'])?sanitize_text_field(wp_unslash($_GET['nonce'])): '', 'mcbFormData' ) ) {
-                wp_die();
+            // S-03: Nonce from POST, S-08: Proper error response
+            if (!wp_verify_nonce(isset($_POST['nonce'])?sanitize_text_field(wp_unslash($_POST['nonce'])): '', 'mcbFormData' ) ) {
+                wp_send_json_error( esc_html__( 'Security check failed.', 'block-for-mailchimp' ), 403 );
             }
 
             $data =  get_option('mcb-email-collect');
             $info = json_decode($data, true);
         
-            $apiKey = $info['key'];
-            $audienceId = isset( $_GET['audienceId'] ) ? sanitize_text_field( wp_unslash( $_GET['audienceId'] ) ) : '';
-            $email = isset( $_GET['email'] ) ? sanitize_email( wp_unslash( $_GET['email'] ) ) : '';
-            $fName = isset( $_GET['fName'] ) ? sanitize_text_field( wp_unslash( $_GET['fName'] )) : '';
-            $lName = isset( $_GET['lName'] ) ? sanitize_text_field( wp_unslash( $_GET['lName'] )) : '';
-            $endpoint_url = isset( $_GET['endpoint_url'] ) ? sanitize_text_field( wp_unslash($_GET['endpoint_url']) ) : '';
-            $accessToken = $info['accessToken'];
+            $apiKey = isset($info['key']) ? $info['key'] : '';
+            // S-03: All form data from POST
+            $audienceId = isset( $_POST['audienceId'] ) ? sanitize_text_field( wp_unslash( $_POST['audienceId'] ) ) : '';
+            $email = isset( $_POST['email'] ) ? sanitize_email( wp_unslash( $_POST['email'] ) ) : '';
+            $fName = isset( $_POST['fName'] ) ? sanitize_text_field( wp_unslash( $_POST['fName'] )) : '';
+            $lName = isset( $_POST['lName'] ) ? sanitize_text_field( wp_unslash( $_POST['lName'] )) : '';
+            // S-02/S-09: Validate endpoint_url with esc_url_raw
+            $endpoint_url = isset( $_POST['endpoint_url'] ) ? esc_url_raw( wp_unslash($_POST['endpoint_url']) ) : '';
+            $accessToken = isset($info['accessToken']) ? $info['accessToken'] : '';
             
             $dc = substr($apiKey, strpos($apiKey, '-') + 1);
 
             $mailDataCenterList = ["us1", "us2", "us3", "us4", "us5", "us6", "us7", "us8", "us9", "us10", "us11", "us12", "us13", "us14", "us15", "us16", "us17", "us18", "us19", "us20"];
         
             if (!in_array($dc, $mailDataCenterList) && !$endpoint_url) {
-                echo wp_json_encode(['success' => false, 'status' => 502, 'message' => 'Invalid API Key or endpoint URL!']);
+                echo wp_json_encode(['success' => false, 'status' => 502, 'message' => esc_html__('Invalid API Key or endpoint URL!', 'block-for-mailchimp')]);
                 wp_die();
             }
         
             if (!$audienceId) {
-                echo wp_json_encode(['success' => false, 'status' => 510, 'message' => 'Audience ID Required!']);
+                echo wp_json_encode(['success' => false, 'status' => 510, 'message' => esc_html__('Audience ID Required!', 'block-for-mailchimp')]);
                 wp_die();
             }
         
             if (!$email) {
-                echo wp_json_encode(['success' => false, 'status' => 511, 'message' => 'Email Address Required!']);
+                echo wp_json_encode(['success' => false, 'status' => 511, 'message' => esc_html__('Email Address Required!', 'block-for-mailchimp')]);
                 wp_die();
             }
         
@@ -150,10 +180,15 @@ if(!class_exists('MailChimpApi')) {
                 $url = "https://$dc.api.mailchimp.com/3.0/lists/$audienceId/members";
                 $headers["Authorization"] = "apikey " . $apiKey;
             } else if ($endpoint_url) {
+                // S-02: Validate endpoint_url matches Mailchimp domain pattern before use
+                if ( ! preg_match( '#^https://[a-z0-9]+\.api\.mailchimp\.com/3\.0/lists#i', $endpoint_url ) ) {
+                    echo wp_json_encode(['success' => false, 'status' => 400, 'message' => esc_html__('Invalid endpoint URL!', 'block-for-mailchimp')]);
+                    wp_die();
+                }
                 $url = "$endpoint_url/$audienceId/members";
-                $headers["Authorization"] = "Bearer " .$accessToken; // Assuming Bearer token for endpoint URL
+                $headers["Authorization"] = "Bearer " . $accessToken;
             } else {
-                echo wp_json_encode(['success' => false, 'status' => 500, 'message' => 'API Key or endpoint URL Required!']);
+                echo wp_json_encode(['success' => false, 'status' => 500, 'message' => esc_html__('API Key or endpoint URL Required!', 'block-for-mailchimp')]);
                 wp_die();
             }
         
@@ -171,7 +206,7 @@ if(!class_exists('MailChimpApi')) {
             ]);
         
             if (is_wp_error($response)) {
-                echo wp_json_encode(['success' => false, 'status' => 500, 'message' => 'Failed to connect to Mailchimp']);
+                echo wp_json_encode(['success' => false, 'status' => 500, 'message' => esc_html__('Failed to connect to Mailchimp', 'block-for-mailchimp')]);
                 wp_die();
             }
         
@@ -179,32 +214,47 @@ if(!class_exists('MailChimpApi')) {
             $data = json_decode($body, true);
         
             if (isset($data['status']) && $data['status'] == 'subscribed') {
-                echo wp_json_encode(['status' => $data['status'], 'message' => 'Successfully subscribed']);
+                echo wp_json_encode(['status' => $data['status'], 'message' => esc_html__('Successfully subscribed', 'block-for-mailchimp')]);
             } else {
-                echo wp_json_encode(['status' => $data['status'], 'message' => 'Failed to subscribe', 'data' => $data, ]);
+                echo wp_json_encode(['status' => isset($data['status']) ? $data['status'] : 'error', 'message' => esc_html__('Failed to subscribe', 'block-for-mailchimp')]);
             }
         
             wp_die();
         }
 
+        /**
+         * Fetch audience IDs via API key.
+         * S-01: Added capability check.
+         * S-03: Changed from $_GET to $_POST for sensitive data.
+         * S-07: Changed wp_remote_get to wp_safe_remote_get.
+         * S-08: Proper error response on nonce failure.
+         */
         public function mcbSubmit_Form_AudienceId()
         {
-            if ( ! wp_verify_nonce( isset( $_GET['nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['nonce'] ) ) : '', 'mcbAudienceIDList' ) ) {
-                wp_die();
+            // S-01: Capability check
+            if ( ! current_user_can( 'manage_options' ) ) {
+                wp_send_json_error( esc_html__( 'Unauthorized', 'block-for-mailchimp' ), 403 );
             }
 
-            $apiKey = isset( $_GET['apiKey'] ) ? sanitize_text_field( wp_unslash( $_GET['apiKey'] ) ) : '';
+            // S-03: Nonce from POST, S-08: Proper error response
+            if ( ! wp_verify_nonce( isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '', 'mcbAudienceIDList' ) ) {
+                wp_send_json_error( esc_html__( 'Security check failed.', 'block-for-mailchimp' ), 403 );
+            }
+
+            // S-03: API key from POST
+            $apiKey = isset( $_POST['apiKey'] ) ? sanitize_text_field( wp_unslash( $_POST['apiKey'] ) ) : '';
             $dc = substr($apiKey, strpos($apiKey, '-') + 1);
 
             $mailDataCenterList = ["us1", "us2", "us3", "us4", "us5", "us6", "us7", "us8", "us9", "us10", "us11", "us12", "us13", "us14", "us15", "us16", "us17", "us18", "us19", "us20"];
 
             if (!in_array($dc, $mailDataCenterList)) {
-                echo wp_json_encode(['success' => false, 'status' => 502, 'message' => 'Invalid API Key!']);
+                echo wp_json_encode(['success' => false, 'status' => 502, 'message' => esc_html__('Invalid API Key!', 'block-for-mailchimp')]);
                 wp_die();
             }
 
             try {
-                $res = wp_remote_get("https://$dc.api.mailchimp.com/3.0/lists?count=1000&offset=0", [
+                // S-07: Use wp_safe_remote_get instead of wp_remote_get
+                $res = wp_safe_remote_get("https://$dc.api.mailchimp.com/3.0/lists?count=1000&offset=0", [
                     "headers" => [
                         "Authorization" => "Basic " . $apiKey,
                         "Content-Type" => "application/json",
@@ -212,11 +262,9 @@ if(!class_exists('MailChimpApi')) {
                 ]);
                 wp_send_json_success($res['body']);
             } catch (\Throwable $th) {
-                //throw $th;
-                wp_send_json_error('Something went wrong!');
+                wp_send_json_error( esc_html__( 'Something went wrong!', 'block-for-mailchimp' ) );
             }
         }
     }
-    new MailChimpApi();
+    new BPBFM_Mailchimp_API();
 }
- 

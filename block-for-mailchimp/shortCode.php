@@ -1,7 +1,7 @@
 <?php
 if (!defined('ABSPATH')) {exit;}
-if(!class_exists("mcbCustomPost")) {
-	class mcbCustomPost{
+if(!class_exists("BPBFM_Custom_Post")) {
+	class BPBFM_Custom_Post {
 		public $post_type = 'block-for-mailchimp';
 		
 		public function __construct(){
@@ -46,8 +46,17 @@ if(!class_exists("mcbCustomPost")) {
 			]); // Register Post Type
 		}
 
+		/**
+		 * B-01: Validate shortcode attributes with shortcode_atts() and absint().
+		 */
 		public function onAddShortcode( $atts ) {
-			$post_id = $atts['id'];
+			$atts = shortcode_atts( array( 'id' => 0 ), $atts, 'mcb-block' );
+			$post_id = absint( $atts['id'] );
+
+			if ( ! $post_id ) {
+				return '';
+			}
+
 			$post = get_post( $post_id );
 			if ( !$post ) {
 				return '';
@@ -75,15 +84,21 @@ if(!class_exists("mcbCustomPost")) {
 			}
 		}
 
+		/**
+		 * B-02: Guard against empty post content or posts with no blocks.
+		 */
 		public function displayContent( $post ){
 			$blocks = parse_blocks( $post->post_content );
+			if ( empty( $blocks ) || empty( $blocks[0]['blockName'] ) ) {
+				return '';
+			}
 			return render_block( $blocks[0] );
 		}
 
 		public function manageMCBPostsColumns( $defaults ) {
 			unset( $defaults['date'] );
-			$defaults['shortcode'] = 'ShortCode';
-			$defaults['date'] = 'Date';
+			$defaults['shortcode'] = __( 'ShortCode', 'block-for-mailchimp' );
+			$defaults['date'] = __( 'Date', 'block-for-mailchimp' );
 			return $defaults;
 		}
 
@@ -93,7 +108,7 @@ if(!class_exists("mcbCustomPost")) {
 				// Escape the shortcode and HTML attributes properly
 				echo "<div class='mcbFrontShortcode' id='mcbFrontShortcode-" . esc_attr( $post_id ) . "'>
 						<input value='[mcb-block id=" . esc_attr( $post_id ) . "]' onclick='mcbHandleShortcode(" . esc_js( $post_id ) . ")'>
-						<span class='tooltip'>Copy To Clipboard</span>
+						<span class='tooltip'>" . esc_html__( 'Copy To Clipboard', 'block-for-mailchimp' ) . "</span>
 					  </div>";
 			}
 		}
@@ -106,6 +121,5 @@ if(!class_exists("mcbCustomPost")) {
 		}
 	 
 	}
-	new mcbCustomPost();
+	new BPBFM_Custom_Post();
 }
-

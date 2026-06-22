@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "mcb/mailchimp",
   "title": "Mailchimp-block",
   "description": "Embed MailChimp email subscription form",
@@ -279,7 +279,7 @@
       "type": "object",
       "default": {
         "color": "#fff",
-        "bg": "##2355f2"
+        "bg": "#2355f2"
       }
     },
     "btnMargin": {

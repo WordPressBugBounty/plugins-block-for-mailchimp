@@ -1,22 +1,22 @@
 # Copyright (C) 2026 bPlugins
-# This file is distributed under the GPLv3.
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Block For MailChimp 1.1.15\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-for-mailchimp-pro\n"
+"Project-Id-Version: Block for Mailchimp – Add Email Subscription Forms and Collect Leads 1.1.16\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-for-mailchimp\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-07T11:37:58+00:00\n"
+"POT-Creation-Date: 2026-06-22T06:52:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: block-for-mailchimp\n"
 
 #. Plugin Name of the plugin
 #: index.php
-msgid "Block For MailChimp"
+msgid "Block for Mailchimp – Add Email Subscription Forms and Collect Leads"
 msgstr ""
 
 #. Description of the plugin
@@ -34,45 +34,101 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
-#: includes/admin-menu.php:27
-#: includes/admin-menu.php:28
+#: includes/admin-menu.php:25
+#: includes/admin-menu.php:26
 msgid "Demo & Help"
 msgstr ""
 
-#: index.php:112
+#: index.php:77
 msgid "Go Pro!"
 msgstr ""
 
-#: index.php:129
+#: index.php:93
 msgid "Docs & FAQs"
 msgstr ""
 
-#: index.php:131
+#: index.php:95
 msgid "Demos"
 msgstr ""
 
-#: mailchimp/API.php:23
+#: mailchimp/API.php:29
+#: mailchimp/API.php:112
+#: mailchimp/API.php:236
+msgid "Unauthorized"
+msgstr ""
+
+#: mailchimp/API.php:34
 msgid "Nonce is missing"
 msgstr ""
 
-#: mailchimp/API.php:31
-msgid "Invalid nonce"
+#: mailchimp/API.php:42
+#: mailchimp/API.php:117
+#: mailchimp/API.php:141
+#: mailchimp/API.php:241
+msgid "Security check failed."
 msgstr ""
 
-#: mailchimp/API.php:36
+#: mailchimp/API.php:47
 msgid "Access token is required"
 msgstr ""
 
-#: mailchimp/API.php:51
+#: mailchimp/API.php:62
 msgid "Failed to fetch data from Mailchimp"
 msgstr ""
 
-#: mailchimp/API.php:71
+#: mailchimp/API.php:74
+msgid "Invalid Mailchimp API endpoint"
+msgstr ""
+
+#: mailchimp/API.php:88
 msgid "Failed to fetch audience lists from Mailchimp"
 msgstr ""
 
-#: mailchimp/API.php:84
+#: mailchimp/API.php:99
 msgid "Invalid response from Mailchimp"
+msgstr ""
+
+#: mailchimp/API.php:128
+#: mailchimp/API.php:265
+msgid "Something went wrong!"
+msgstr ""
+
+#: mailchimp/API.php:162
+msgid "Invalid API Key or endpoint URL!"
+msgstr ""
+
+#: mailchimp/API.php:167
+#: build/view.js:2
+msgid "Audience ID Required!"
+msgstr ""
+
+#: mailchimp/API.php:172
+msgid "Email Address Required!"
+msgstr ""
+
+#: mailchimp/API.php:185
+msgid "Invalid endpoint URL!"
+msgstr ""
+
+#: mailchimp/API.php:191
+msgid "API Key or endpoint URL Required!"
+msgstr ""
+
+#: mailchimp/API.php:209
+msgid "Failed to connect to Mailchimp"
+msgstr ""
+
+#: mailchimp/API.php:217
+msgid "Successfully subscribed"
+msgstr ""
+
+#: mailchimp/API.php:219
+msgid "Failed to subscribe"
+msgstr ""
+
+#: mailchimp/API.php:251
+#: build/view.js:2
+msgid "Invalid API Key!"
 msgstr ""
 
 #: shortCode.php:20
@@ -111,6 +167,29 @@ msgstr ""
 
 #: shortCode.php:30
 msgid "Sorry, we couldn't find the that you are looking for."
+msgstr ""
+
+#: shortCode.php:100
+msgid "ShortCode"
+msgstr ""
+
+#: shortCode.php:101
+msgid "Date"
+msgstr ""
+
+#: shortCode.php:111
+#: assets/js/admin.js:9
+#: assets/js/admin.js:19
+msgid "Copy To Clipboard"
+msgstr ""
+
+#: assets/js/admin.js:7
+#: assets/js/admin.js:17
+msgid "Copied Successfully!"
+msgstr ""
+
+#: build/view.js:2
+msgid "Audience Id Not Found!"
 msgstr ""
 
 #: build/block.json
