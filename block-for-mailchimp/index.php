@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Block for Mailchimp – Add Email Subscription Forms and Collect Leads
  * Description: Connect your MailChimp with your WordPress.
- * Version: 1.1.16
+ * Version: 1.1.17
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -17,7 +17,7 @@ if ( function_exists( 'bpbfm_fs' ) ) {
     bpbfm_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'BPBFM_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.16' ) );
+    define( 'BPBFM_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.17' ) );
     define( 'BPBFM_DIR', plugin_dir_url( __FILE__ ) );
     define( 'BPBFM_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BPBFM_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );

@@ -34,7 +34,8 @@ if(!class_exists('BPBFM_AdminMenu')) {
         {?>
             <div id='mcbDashboard'
                 data-info='<?php echo esc_attr( wp_json_encode( [
-                    'version' => BPBFM_PLUGIN_VERSION
+                    'version' => BPBFM_PLUGIN_VERSION,
+                    'adminUrl' => admin_url()
                 ] ) ); ?>'
             >
             </div>

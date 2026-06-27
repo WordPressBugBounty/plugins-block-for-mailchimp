@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Block for Mailchimp – Add Email Subscription Forms and Collect Leads 1.1.16\n"
+"Project-Id-Version: Block for Mailchimp – Add Email Subscription Forms and Collect Leads 1.1.17\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-for-mailchimp\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-22T06:52:39+00:00\n"
+"POT-Creation-Date: 2026-06-27T10:26:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: block-for-mailchimp\n"
@@ -34,33 +34,46 @@ msgstr ""
 msgid "http://bplugins.com"
 msgstr ""
 
+#: block-for-mailchimp/includes/admin-menu.php:25
+#: block-for-mailchimp/includes/admin-menu.php:26
 #: includes/admin-menu.php:25
 #: includes/admin-menu.php:26
 msgid "Demo & Help"
 msgstr ""
 
+#: block-for-mailchimp/index.php:77
 #: index.php:77
 msgid "Go Pro!"
 msgstr ""
 
+#: block-for-mailchimp/index.php:93
 #: index.php:93
 msgid "Docs & FAQs"
 msgstr ""
 
+#: block-for-mailchimp/index.php:95
 #: index.php:95
 msgid "Demos"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:29
+#: block-for-mailchimp/mailchimp/API.php:112
+#: block-for-mailchimp/mailchimp/API.php:236
 #: mailchimp/API.php:29
 #: mailchimp/API.php:112
 #: mailchimp/API.php:236
 msgid "Unauthorized"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:34
 #: mailchimp/API.php:34
 msgid "Nonce is missing"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:42
+#: block-for-mailchimp/mailchimp/API.php:117
+#: block-for-mailchimp/mailchimp/API.php:141
+#: block-for-mailchimp/mailchimp/API.php:241
 #: mailchimp/API.php:42
 #: mailchimp/API.php:117
 #: mailchimp/API.php:141
@@ -68,150 +81,192 @@ msgstr ""
 msgid "Security check failed."
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:47
 #: mailchimp/API.php:47
 msgid "Access token is required"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:62
 #: mailchimp/API.php:62
 msgid "Failed to fetch data from Mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:74
 #: mailchimp/API.php:74
 msgid "Invalid Mailchimp API endpoint"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:88
 #: mailchimp/API.php:88
 msgid "Failed to fetch audience lists from Mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:99
 #: mailchimp/API.php:99
 msgid "Invalid response from Mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:128
+#: block-for-mailchimp/mailchimp/API.php:265
 #: mailchimp/API.php:128
 #: mailchimp/API.php:265
 msgid "Something went wrong!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:162
 #: mailchimp/API.php:162
 msgid "Invalid API Key or endpoint URL!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:167
 #: mailchimp/API.php:167
+#: block-for-mailchimp/build/view.js:2
 #: build/view.js:2
 msgid "Audience ID Required!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:172
 #: mailchimp/API.php:172
 msgid "Email Address Required!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:185
 #: mailchimp/API.php:185
 msgid "Invalid endpoint URL!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:191
 #: mailchimp/API.php:191
 msgid "API Key or endpoint URL Required!"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:209
 #: mailchimp/API.php:209
 msgid "Failed to connect to Mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:217
 #: mailchimp/API.php:217
 msgid "Successfully subscribed"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:219
 #: mailchimp/API.php:219
 msgid "Failed to subscribe"
 msgstr ""
 
+#: block-for-mailchimp/mailchimp/API.php:251
 #: mailchimp/API.php:251
+#: block-for-mailchimp/build/view.js:2
 #: build/view.js:2
 msgid "Invalid API Key!"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:20
+#: block-for-mailchimp/shortCode.php:21
+#: block-for-mailchimp/shortCode.php:22
 #: shortCode.php:20
 #: shortCode.php:21
 #: shortCode.php:22
 msgid "Mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:23
 #: shortCode.php:23
 msgid "All Mailchimp Blocks"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:24
 #: shortCode.php:24
 msgid "Add New"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:25
 #: shortCode.php:25
 msgid "&#8627; Add New"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:26
 #: shortCode.php:26
 msgid "Edit"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:27
 #: shortCode.php:27
 msgid "New"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:28
 #: shortCode.php:28
 msgid "View"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:29
 #: shortCode.php:29
 msgid "Search"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:30
 #: shortCode.php:30
 msgid "Sorry, we couldn't find the that you are looking for."
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:100
 #: shortCode.php:100
 msgid "ShortCode"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:101
 #: shortCode.php:101
 msgid "Date"
 msgstr ""
 
+#: block-for-mailchimp/shortCode.php:111
 #: shortCode.php:111
 #: assets/js/admin.js:9
 #: assets/js/admin.js:19
+#: block-for-mailchimp/assets/js/admin.js:9
+#: block-for-mailchimp/assets/js/admin.js:19
 msgid "Copy To Clipboard"
 msgstr ""
 
 #: assets/js/admin.js:7
 #: assets/js/admin.js:17
+#: block-for-mailchimp/assets/js/admin.js:7
+#: block-for-mailchimp/assets/js/admin.js:17
 msgid "Copied Successfully!"
 msgstr ""
 
+#: block-for-mailchimp/build/view.js:2
 #: build/view.js:2
 msgid "Audience Id Not Found!"
 msgstr ""
 
+#: block-for-mailchimp/build/block.json
 #: build/block.json
 msgctxt "block title"
 msgid "Mailchimp-block"
 msgstr ""
 
+#: block-for-mailchimp/build/block.json
 #: build/block.json
 msgctxt "block description"
 msgid "Embed MailChimp email subscription form"
 msgstr ""
 
+#: block-for-mailchimp/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "newsletter"
 msgstr ""
 
+#: block-for-mailchimp/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "mailchimp"
 msgstr ""
 
+#: block-for-mailchimp/build/block.json
 #: build/block.json
 msgctxt "block keyword"
 msgid "marketing"

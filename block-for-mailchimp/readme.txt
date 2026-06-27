@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, mailchimp, email, marketing, newsletter
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.1.16
+Stable tag: 1.1.17
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -213,6 +213,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 == Changelog ==
 
+= 1.1.17 - 25, June, 2026 =
+* Added a new Dashboard;
+
 = 1.1.16 - 22 June, 2026 =
 * New placement layout modal feature added;
 
@@ -311,6 +314,9 @@ Please report security bugs found in the source code of the MailChimp Block plug
 
 
 == Upgrade Notice ==
+
+= 1.1.17 - 25, June, 2026 =
+* Added a new Dashboard;
 
 = 1.1.15 - 7 April, 2026 =
 * Added a new modern dashboard;
