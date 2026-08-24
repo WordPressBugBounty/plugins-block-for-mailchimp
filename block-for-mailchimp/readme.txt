@@ -1,7 +1,7 @@
 === Block for Mailchimp – grow your email list with signup forms ===
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Tags: block, mailchimp, email, marketing, newsletter
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 1.1.17
 Requires PHP: 7.2
 Requires at least: 6.5
@@ -17,7 +17,7 @@ Add Mailchimp email subscription forms to WordPress with a Gutenberg block – i
 
 [**Mailchimp Block**](https://bplugins.com/products/mailchimp-block/) | [**Documentation**](https://bplugins.com/docs/mailchimp-block/) | [**Pricing**](https://bplugins.com/products/mailchimp-block/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/mailchimp-block/#demos)
 
-https://www.youtube.com/watch?v=MhrwNpjoabY
+https://www.youtube.com/watch?v=1x_C9fprfF8
 
 ### Why Block for Mailchimp?
 
@@ -54,6 +54,8 @@ Upgrade to [**Mailchimp Block Pro**](https://bplugins.com/products/mailchimp-blo
 - **Regular Updates & Priority Support:** Ongoing improvements and fast customer support.
 
 ### How to Use – Quick Start
+
+https://www.youtube.com/watch?v=MhrwNpjoabY
 
 1. **Install** and **activate** the plugin.
 2. Open the page or post where you want to display your Mailchimp form.
