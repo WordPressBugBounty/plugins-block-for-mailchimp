@@ -17,7 +17,7 @@ Add Mailchimp email subscription forms to WordPress with a Gutenberg block – i
 
 [**Mailchimp Block**](https://bplugins.com/products/mailchimp-block/) | [**Documentation**](https://bplugins.com/docs/mailchimp-block/) | [**Pricing**](https://bplugins.com/products/mailchimp-block/#pricing) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/mailchimp-block/#demos)
 
-https://www.youtube.com/watch?v=1x_C9fprfF8
+https://www.youtube.com/watch?v=1x_C9fprfF8 
 
 ### Why Block for Mailchimp?
 
