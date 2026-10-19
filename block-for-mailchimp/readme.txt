@@ -41,7 +41,7 @@ Whether you run a business, publish a blog, or manage a community, this plugin h
 - **Theme Compatibility:** Works smoothly with all well-coded WordPress themes.
 
 ### Pro Version
-
+ 
 Upgrade to [**Mailchimp Block Pro**](https://bplugins.com/products/mailchimp-block/#pricing) for advanced design options and extra control over your form's layout and behavior:
 
 - **Five Layout Options:** All free layouts plus an auto-popup form that appears after a set delay.
@@ -55,7 +55,7 @@ Upgrade to [**Mailchimp Block Pro**](https://bplugins.com/products/mailchimp-blo
 
 ### How to Use – Quick Start
 
-https://www.youtube.com/watch?v=MhrwNpjoabY
+https://www.youtube.com/watch?v=MhrwNpjoabY 
 
 1. **Install** and **activate** the plugin.
 2. Open the page or post where you want to display your Mailchimp form.
